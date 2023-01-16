@@ -4,7 +4,7 @@ import json
 import webbrowser
 import re
 
-# The assumption is to create the url to the docs page is the second part of the function name xxx.[#####].lower()
+# To create the url to the docs page, the assumption is the second part of the function name xxx.[#####].lower()
 # e.g algo.movePivotPointToTargetedOccurrenceCenter = https://www.pixyz-software.com/documentations/html/2022.1/studio/api/#movepivotpointtotargetedoccurrencecenter
 # Works for most, but not all cases
 baseURL = "https://www.pixyz-software.com/documentations/html/2022.1/studio/api/#"
