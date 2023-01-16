@@ -1,0 +1,4037 @@
+{
+    "algo.assembleCAD": {
+        "prefix": "algo.assembleCAD",
+        "body": "algo.assembleCAD(occurrences, tolerance, removeDuplicatedFaces)",
+        "description": "Assemble faces of CAD shapes"
+    },
+    "algo.backToInitialBRep": {
+        "prefix": "algo.backToInitialBRep",
+        "body": "algo.backToInitialBRep(occurrences)",
+        "description": "Create the BRep shape from a Tessellated shape with Domain Patch Attributes (after tessellate)"
+    },
+    "algo.bakeImpostor": {
+        "prefix": "algo.bakeImpostor",
+        "body": "algo.bakeImpostor(occurrence, XFrames, YFrames, hemi, resolution, padding, roughness, metallic, ao)",
+        "description": "bakes impostors textures"
+    },
+    "algo.bakeVertexAttributes": {
+        "prefix": "algo.bakeVertexAttributes",
+        "body": "algo.bakeVertexAttributes(destinationOccurrences, sourceOccurrences, skinnedMesh, positions, useCurrentPositionAsTPose)",
+        "description": "Bake vertex attributes on meshes from other meshes"
+    },
+    "algo.basicRetopologize": {
+        "prefix": "algo.basicRetopologize",
+        "body": "algo.basicRetopologize(occurrences, targetTriangleCount, pureQuad, pointCloud)",
+        "description": "Replace the tessellations of the selected parts by a retopology"
+    },
+    "algo.calculateNormalsInPointClouds": {
+        "prefix": "algo.calculateNormalsInPointClouds",
+        "body": "algo.calculateNormalsInPointClouds(occurrences)",
+        "description": "calculate the normal of each point of a Point Cloud"
+    },
+    "algo.checkTessellationFlags": {
+        "prefix": "algo.checkTessellationFlags",
+        "body": "algo.checkTessellationFlags(occurrences)",
+        "description": ""
+    },
+    "algo.combineMeshesByMaterials": {
+        "prefix": "algo.combineMeshesByMaterials",
+        "body": "algo.combineMeshesByMaterials(occurrences, mergeNoMaterials, mergeHiddenPartsMode)",
+        "description": "Explode and (re)merge a set of mesh parts by visible materials"
+    },
+    "algo.configureFunctionLogger": {
+        "prefix": "algo.configureFunctionLogger",
+        "body": "algo.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "algo.convertCADtoNURBS": {
+        "prefix": "algo.convertCADtoNURBS",
+        "body": "algo.convertCADtoNURBS(occurrences)",
+        "description": "Convert all CAD curves/surfaces to NURBS definition"
+    },
+    "algo.convertSimilarOccurencesToInstances": {
+        "prefix": "algo.convertSimilarOccurencesToInstances",
+        "body": "algo.convertSimilarOccurencesToInstances(occurrences, checkMeshTopo, checkVertexPositions, vertexPositionPrecision, checkUVTopo, checkUVVertexPositions, UVPositionprecision, keepExistingPrototypes)",
+        "description": "Create instances when there are similar parts."
+    },
+    "algo.convexDecomposition": {
+        "prefix": "algo.convexDecomposition",
+        "body": "algo.convexDecomposition(occurrences, maxCount, vertexCount, approximate, resolution, concavity)",
+        "description": "Explode each mesh to approximated convex decomposition"
+    },
+    "algo.crackCADMoebiusStrip": {
+        "prefix": "algo.crackCADMoebiusStrip",
+        "body": "algo.crackCADMoebiusStrip(occurrences)",
+        "description": "Detect Moebius strip and crack them if there is somme of them in the selection"
+    },
+    "algo.crackEdges": {
+        "prefix": "algo.crackEdges",
+        "body": "algo.crackEdges(occurrences, useAttributesFilter, useSharpEdgeFilter, sharpAngleFilter, useNonManifoldFilter)",
+        "description": "crack polygonal edges according to given criteria"
+    },
+    "algo.createFreeEdgesFromPatches": {
+        "prefix": "algo.createFreeEdgesFromPatches",
+        "body": "algo.createFreeEdgesFromPatches(occurrences)",
+        "description": "Create free edges from patch borders"
+    },
+    "algo.createIdentifiedPatchesFromPatches": {
+        "prefix": "algo.createIdentifiedPatchesFromPatches",
+        "body": "algo.createIdentifiedPatchesFromPatches(occurrences)",
+        "description": "Create identified patch from existing patch (this is useful before cloning for baking)"
+    },
+    "algo.createInstancesBySimilarity": {
+        "prefix": "algo.createInstancesBySimilarity",
+        "body": "algo.createInstancesBySimilarity(occurrences, dimensionsSimilarity, polycountSimilarity, ignoreSymmetry, keepExistingPrototypes, createNewOccurrencesForPrototypes)",
+        "description": "Create instances when there are similar parts. This can be used to repair instances or to simplify a model that has similar parts that could be instantiated instead to reduce the number of unique meshes (reduces drawcalls, GPU memory usage and file size). Using 1.0 (100%) in all similarity criteria is non destructive. Using lower values will help finding more similar parts, even if their polycount or dimensions varies a bit."
+    },
+    "algo.createNormals": {
+        "prefix": "algo.createNormals",
+        "body": "algo.createNormals(occurrences, sharpEdge, override, useAreaWeighting)",
+        "description": "Create normal attributes on tessellations"
+    },
+    "algo.createOcclusionMesh": {
+        "prefix": "algo.createOcclusionMesh",
+        "body": "algo.createOcclusionMesh(occurrences, type, voxelSize, gap)",
+        "description": "Compute an occluder or an occludee with the occurrences selected"
+    },
+    "algo.createPointCloudKDTree": {
+        "prefix": "algo.createPointCloudKDTree",
+        "body": "algo.createPointCloudKDTree(occurrences, depth, addToScene)",
+        "description": "Create a KD-Tree from some point clouds occurrence, the given occurrences are deleted (even if they contains triangles) and the KD-Tree is represented in a new occurrence sub tree"
+    },
+    "algo.createTangents": {
+        "prefix": "algo.createTangents",
+        "body": "algo.createTangents(occurrences, uvChannel, override)",
+        "description": "Create tangent attributes on tessellations"
+    },
+    "algo.createVisibilityPatchesFromPatch": {
+        "prefix": "algo.createVisibilityPatchesFromPatch",
+        "body": "algo.createVisibilityPatchesFromPatch(occurrences)",
+        "description": "Create visibility patches from existing patches"
+    },
+    "algo.debug": {
+        "prefix": "algo.debug",
+        "body": "algo.debug(occurrences)",
+        "description": "Debug function"
+    },
+    "algo.decimate": {
+        "prefix": "algo.decimate",
+        "body": "algo.decimate(occurrences, surfacicTolerance, lineicTolerance, normalTolerance, texCoordTolerance, releaseConstraintOnSmallArea)",
+        "description": "reduce the polygon count by removing some vertices"
+    },
+    "algo.decimateEdgeCollapse": {
+        "prefix": "algo.decimateEdgeCollapse",
+        "body": "algo.decimateEdgeCollapse(occurrences, surfacicTolerance, boundaryWeight, normalWeight, UVWeight, sharpNormalWeight, UVSeamWeight, normalMaxDeviation, forbidUVOverlaps, UVMaxDeviation, UVSeamMaxDeviation, protectTopology, qualityTradeoff)",
+        "description": "reduce the polygon count by collapsing some edges to obtain an simplified mesh"
+    },
+    "algo.decimatePointClouds": {
+        "prefix": "algo.decimatePointClouds",
+        "body": "algo.decimatePointClouds(occurrences, tolerance)",
+        "description": "decimate Point Cloud Occurrences according to tolerance "
+    },
+    "algo.decimateTarget": {
+        "prefix": "algo.decimateTarget",
+        "body": "algo.decimateTarget(occurrences, targetStrategy, UVImportance, protectTopology, iterativeThreshold)",
+        "description": "reduce the polygon count by collapsing some edges to obtain a target triangle count (iterative version that use less memory)"
+    },
+    "algo.decimateTargetLODChain": {
+        "prefix": "algo.decimateTargetLODChain",
+        "body": "algo.decimateTargetLODChain(occurrences, targetTriangleCounts, useVertexWeigths, boundaryWeight, normalWeight, UVWeight, sharpNormalWeight, UVSeamWeight, forbidUVFoldovers, protectTopology, qualityTradeoff)",
+        "description": "Create LOD using decimate target"
+    },
+    "algo.decimateTargetOldSchool": {
+        "prefix": "algo.decimateTargetOldSchool",
+        "body": "algo.decimateTargetOldSchool(occurrences, TargetStrategy, boundaryWeight, normalWeight, UVWeight, sharpNormalWeight, UVSeamWeight, forbidUVFoldovers, protectTopology, qualityTradeoff, useStatic)",
+        "description": "reduce the polygon count by collapsing some edges to obtain a target triangle count"
+    },
+    "algo.defeatureCAD": {
+        "prefix": "algo.defeatureCAD",
+        "body": "algo.defeatureCAD(occurrences, maxDiameter)",
+        "description": "Remove some features from brep"
+    },
+    "algo.deleteAttibute": {
+        "prefix": "algo.deleteAttibute",
+        "body": "algo.deleteAttibute(occurrence, type)",
+        "description": "Delete designed attribute on tessellations"
+    },
+    "algo.deleteBRepShapes": {
+        "prefix": "algo.deleteBRepShapes",
+        "body": "algo.deleteBRepShapes(occurrences, onlyTessellated)",
+        "description": "Delete BRep representation on parts"
+    },
+    "algo.deleteFreeVertices": {
+        "prefix": "algo.deleteFreeVertices",
+        "body": "algo.deleteFreeVertices(occurrences)",
+        "description": "Delete all free vertices of the mesh of given parts"
+    },
+    "algo.deleteLines": {
+        "prefix": "algo.deleteLines",
+        "body": "algo.deleteLines(occurrences)",
+        "description": "Delete all free line of the mesh of given parts"
+    },
+    "algo.deleteNormals": {
+        "prefix": "algo.deleteNormals",
+        "body": "algo.deleteNormals(occurrences)",
+        "description": "Remove normal attributes on tessellations"
+    },
+    "algo.deletePatches": {
+        "prefix": "algo.deletePatches",
+        "body": "algo.deletePatches(occurrences, keepOnePatchByMaterial)",
+        "description": "Delete patches attributes on tessellations"
+    },
+    "algo.deletePolygons": {
+        "prefix": "algo.deletePolygons",
+        "body": "algo.deletePolygons(occurrences)",
+        "description": "Delete all polygons of the mesh of given parts"
+    },
+    "algo.deleteTangents": {
+        "prefix": "algo.deleteTangents",
+        "body": "algo.deleteTangents(occurrences)",
+        "description": "Remove tangent attributes on tessellations"
+    },
+    "algo.deleteTextureCoordinates": {
+        "prefix": "algo.deleteTextureCoordinates",
+        "body": "algo.deleteTextureCoordinates(occurrences, channel)",
+        "description": "Delete texture coordinates on tessellations"
+    },
+    "algo.deleteVisibilityPatches": {
+        "prefix": "algo.deleteVisibilityPatches",
+        "body": "algo.deleteVisibilityPatches(occurrences)",
+        "description": "delete the visibility patches of given occurrences"
+    },
+    "algo.evalDecimateErrorForTarget": {
+        "prefix": "algo.evalDecimateErrorForTarget",
+        "body": "algo.evalDecimateErrorForTarget(occurrences, TargetStrategy, boundaryWeight, normalWeight, UVWeight, sharpNormalWeight, UVSeamWeight, forbidUVFoldovers, protectTopology)",
+        "description": "returns the max error to set to reach a given target"
+    },
+    "algo.explodeBodies": {
+        "prefix": "algo.explodeBodies",
+        "body": "algo.explodeBodies(occurrences, groupOpenShells)",
+        "description": "Explode all CAD Parts by body"
+    },
+    "algo.explodeConnectedMeshes": {
+        "prefix": "algo.explodeConnectedMeshes",
+        "body": "algo.explodeConnectedMeshes(occurrences)",
+        "description": "Explode connected set of polygons to parts"
+    },
+    "algo.explodePartByMaterials": {
+        "prefix": "algo.explodePartByMaterials",
+        "body": "algo.explodePartByMaterials(occurrences)",
+        "description": "Explode all parts by material"
+    },
+    "algo.explodePatches": {
+        "prefix": "algo.explodePatches",
+        "body": "algo.explodePatches(occurrences)",
+        "description": "Explode all parts by patch"
+    },
+    "algo.explodeVertexCount": {
+        "prefix": "algo.explodeVertexCount",
+        "body": "algo.explodeVertexCount(occurrences, maxVertexCount, maxTriangleCount, countMergedVerticesOnce)",
+        "description": "Explode parts to respect a maximum vertex count"
+    },
+    "algo.explodeVoxel": {
+        "prefix": "algo.explodeVoxel",
+        "body": "algo.explodeVoxel(occurrences, voxelSize)",
+        "description": "Explode parts by voxel"
+    },
+    "algo.extractNeutralAxis": {
+        "prefix": "algo.extractNeutralAxis",
+        "body": "algo.extractNeutralAxis(occurrences, maxDiameter, removeOriginalMesh)",
+        "description": "Extract neutral axis from tessellations"
+    },
+    "algo.getIdealDistance": {
+        "prefix": "algo.getIdealDistance",
+        "body": "algo.getIdealDistance(error, pixel)",
+        "description": "compute the ideal distance from a given error"
+    },
+    "algo.getTessellations": {
+        "prefix": "algo.getTessellations",
+        "body": "algo.getTessellations(occurrences)",
+        "description": "returns all the tessellation of the given occurrences (only returns editable mesh, see algo.toEditableMesh)"
+    },
+    "algo.getVisibilityStats": {
+        "prefix": "algo.getVisibilityStats",
+        "body": "algo.getVisibilityStats(occurrences)",
+        "description": "returns the visibility statistics for some occurrences"
+    },
+    "algo.getVoxelTessellation": {
+        "prefix": "algo.getVoxelTessellation",
+        "body": "algo.getVoxelTessellation(voxels, threshold)",
+        "description": ""
+    },
+    "algo.identifyPatches": {
+        "prefix": "algo.identifyPatches",
+        "body": "algo.identifyPatches(occurrences, useAttributesFilter, useSharpEdgeFilter, sharpAngle, useBoundaryFilter, useNonManifoldFilter, useLineEdgeFilter, useQuadLineFilter)",
+        "description": "Create cad patches on tessellation (needed by some functions)"
+    },
+    "algo.lineToCylinderCAD": {
+        "prefix": "algo.lineToCylinderCAD",
+        "body": "algo.lineToCylinderCAD(occurrences, radius)",
+        "description": "Change lines into cylinders"
+    },
+    "algo.lineToTexture": {
+        "prefix": "algo.lineToTexture",
+        "body": "algo.lineToTexture(lines, useColor, resolution, thickness)",
+        "description": "Generate a textured quadrangle over an existing mesh of coplanar lines"
+    },
+    "algo.listFeatures": {
+        "prefix": "algo.listFeatures",
+        "body": "algo.listFeatures(occurrences, throughHoles, blindHoles, maxDiameter)",
+        "description": "List features from tessellations"
+    },
+    "algo.marchingCubes": {
+        "prefix": "algo.marchingCubes",
+        "body": "algo.marchingCubes(occurrences, voxelSize, elements, dilation, surfacic)",
+        "description": "Replace the tessellations of the selected parts by a marching cube representation"
+    },
+    "algo.mergeVertices": {
+        "prefix": "algo.mergeVertices",
+        "body": "algo.mergeVertices(occurrences, maxDistance, mask)",
+        "description": "merge near vertices according to the given distance"
+    },
+    "algo.meshComparison": {
+        "prefix": "algo.meshComparison",
+        "body": "algo.meshComparison(mesh_1, mesh_2)",
+        "description": "compare two meshes"
+    },
+    "algo.noiseMesh": {
+        "prefix": "algo.noiseMesh",
+        "body": "algo.noiseMesh(occurrences, maxAmplitude)",
+        "description": "Apply noise to vertex positions along their normals"
+    },
+    "algo.optimizeCADLoops": {
+        "prefix": "algo.optimizeCADLoops",
+        "body": "algo.optimizeCADLoops(occurrences)",
+        "description": "Optimize CAD Face loops by merging useless loop edges"
+    },
+    "algo.optimizeForRendering": {
+        "prefix": "algo.optimizeForRendering",
+        "body": "algo.optimizeForRendering(occurrences)",
+        "description": "Optimize mesh for rendering (lossless, only reindexing)"
+    },
+    "algo.optimizeSubMeshes": {
+        "prefix": "algo.optimizeSubMeshes",
+        "body": "algo.optimizeSubMeshes(occurrences)",
+        "description": "Sort sub meshes by materials"
+    },
+    "algo.optimizeTextureSize": {
+        "prefix": "algo.optimizeTextureSize",
+        "body": "algo.optimizeTextureSize(root, texelPerMm)",
+        "description": "Resizes scene textures based on a number of texels per 3D space units (e.g: mm)"
+    },
+    "algo.proxyMesh": {
+        "prefix": "algo.proxyMesh",
+        "body": "algo.proxyMesh(occurrences, voxelSize, elements, dilation, surfacic)",
+        "description": "Replace the tessellations of the selected parts by a proxy mesh based on a voxelization"
+    },
+    "algo.removeHoles": {
+        "prefix": "algo.removeHoles",
+        "body": "algo.removeHoles(occurrences, throughHoles, blindHoles, surfacicHoles, maxDiameter, fillWithMaterial)",
+        "description": "Remove some features from tessellations"
+    },
+    "algo.repairCAD": {
+        "prefix": "algo.repairCAD",
+        "body": "algo.repairCAD(occurrences, tolerance, orient)",
+        "description": "Repair CAD shapes, assemble faces, remove duplicated faces, optimize loops and repair topology"
+    },
+    "algo.replaceBy": {
+        "prefix": "algo.replaceBy",
+        "body": "algo.replaceBy(occurrences, replaceBy)",
+        "description": "Replace geometries by other shapes, or primitives"
+    },
+    "algo.replaceByBox": {
+        "prefix": "algo.replaceByBox",
+        "body": "algo.replaceByBox(occurrences, boxType)",
+        "description": "Replace objects by a bounding box"
+    },
+    "algo.replaceByConvexHull": {
+        "prefix": "algo.replaceByConvexHull",
+        "body": "algo.replaceByConvexHull(occurrences)",
+        "description": "Replace objects by convex hull"
+    },
+    "algo.replaceByPrimitive": {
+        "prefix": "algo.replaceByPrimitive",
+        "body": "algo.replaceByPrimitive(occurrences, primitive, generateUV)",
+        "description": "Replace objects by a primitive shapes"
+    },
+    "algo.retessellate": {
+        "prefix": "algo.retessellate",
+        "body": "algo.retessellate(occurrences, maxSag, maxLength, maxAngle, createNormals, uvMode, uvChannel, uvPadding, createTangents, createFreeEdges)",
+        "description": "Update the tessellated representation of each CAD part with new tessellation parameters"
+    },
+    "algo.retopologize": {
+        "prefix": "algo.retopologize",
+        "body": "algo.retopologize(occurrences, targetTriangleCount, pureQuad, pointCloud, precision)",
+        "description": "Replace the tessellations of the selected parts by a retopology of the external hull"
+    },
+    "algo.retopologizeWithClusterQuadrics": {
+        "prefix": "algo.retopologizeWithClusterQuadrics",
+        "body": "algo.retopologizeWithClusterQuadrics(occurrences, voxelSize)",
+        "description": "Replace the tessellations of the selected parts by a retopology base on cluster quadrics"
+    },
+    "algo.segmentByDistorsion": {
+        "prefix": "algo.segmentByDistorsion",
+        "body": "algo.segmentByDistorsion(occurrences, localThreshold, globalThreshold)",
+        "description": ""
+    },
+    "algo.selectSimilar": {
+        "prefix": "algo.selectSimilar",
+        "body": "algo.selectSimilar(occurrences, dimensionsSimilarity, polycountSimilarity, ignoreSymmetry)",
+        "description": "Selects occurrences in the whole scene that are similar to the selected occurrences. If several occurrences are selected, the selection afterwards will contain similar parts for each input occurrence."
+    },
+    "algo.smoothMesh": {
+        "prefix": "algo.smoothMesh",
+        "body": "algo.smoothMesh(occurrences, mode, maxIterations, lockSignificantEdges)",
+        "description": ""
+    },
+    "algo.sweep": {
+        "prefix": "algo.sweep",
+        "body": "algo.sweep(occurrences, radius, sides, createNormals, keepLines, generateUV)",
+        "description": "Extrudes a circular section along an underlying polyline (curve)"
+    },
+    "algo.tessellate": {
+        "prefix": "algo.tessellate",
+        "body": "algo.tessellate(occurrences, maxSag, maxLength, maxAngle, createNormals, uvMode, uvChannel, uvPadding, createTangents, createFreeEdges, keepBRepShape, overrideExistingTessellation)",
+        "description": "Create a tessellated representation from a CAD representation for each given part"
+    },
+    "algo.tessellatePointClouds": {
+        "prefix": "algo.tessellatePointClouds",
+        "body": "algo.tessellatePointClouds(occurrences, kNeighbors, keepPoints, colorize)",
+        "description": "Tessellate point clouds to replace the geometry with a polygonal connect mesh"
+    },
+    "algo.tessellateRelativelyToAABB": {
+        "prefix": "algo.tessellateRelativelyToAABB",
+        "body": "algo.tessellateRelativelyToAABB(occurrences, maxSag, sagRatio, maxLength, maxAngle, createNormals, uvMode, uvChannel, uvPadding, createTangents, createFreeEdges, keepBRepShape, overrideExistingTessellation)",
+        "description": "Creates a tessellated representation from a CAD representation for each given part. It multiplies the length of the diagonal of the bounding box by the sagRatio. If the output value is above maxSag, then maxSag is used as tessellation value. Else if the output value is below maxSag, it is used as tessellation value."
+    },
+    "algo.voxelize": {
+        "prefix": "algo.voxelize",
+        "body": "algo.voxelize(occurrences, voxelSize, elements, dilation, useCurrentAnimationPosition)",
+        "description": "Replace the tessellations of the selected parts by a voxelization of the external skin"
+    },
+    "algo.voxelizePointClouds": {
+        "prefix": "algo.voxelizePointClouds",
+        "body": "algo.voxelizePointClouds(occurrences, voxelSize)",
+        "description": "Explode point clouds to voxels"
+    },
+    "algo.bakeUV": {
+        "prefix": "algo.bakeUV",
+        "body": "algo.bakeUV(source, destination, sourceChannel, destinationChannel, tolerance)",
+        "description": "Bake UV from a mesh to another mesh"
+    },
+    "algo.combineMeshes": {
+        "prefix": "algo.combineMeshes",
+        "body": "algo.combineMeshes(occurrences, bakingOptions, overrideExistingUVs)",
+        "description": "Combine all given meshes to one mesh with one material (baked)"
+    },
+    "algo.createVisibilityInformation": {
+        "prefix": "algo.createVisibilityInformation",
+        "body": "algo.createVisibilityInformation(occurrences, level, resolution, sphereCount, fovX, considerTransparentOpaque)",
+        "description": "Create visilibity information on parts viewed from a set of camera automatically placed on a sphere around the scene"
+    },
+    "algo.createVisibilityInformationFromViewPoints": {
+        "prefix": "algo.createVisibilityInformationFromViewPoints",
+        "body": "algo.createVisibilityInformationFromViewPoints(occurrences, cameraPositions, cameraDirections, cameraUps, resolution, fovX, considerTransparentOpaque)",
+        "description": "Create visilibity information on parts viewed from a given set of camera"
+    },
+    "algo.getHiddenOccurrences": {
+        "prefix": "algo.getHiddenOccurrences",
+        "body": "algo.getHiddenOccurrences(occurrences, resolution, sphereCount, fovX, considerTransparentOpaque)",
+        "description": "Return parts occurrences not viewed from a sphere around the scene"
+    },
+    "algo.hiddenRemoval": {
+        "prefix": "algo.hiddenRemoval",
+        "body": "algo.hiddenRemoval(occurrences, level, resolution, sphereCount, fovX, considerTransparentOpaque, adjacencyDepth)",
+        "description": "Delete parts, patches or polygons not viewed from a sphere around the scene"
+    },
+    "algo.hiddenRemovalCamera": {
+        "prefix": "algo.hiddenRemovalCamera",
+        "body": "algo.hiddenRemovalCamera(occurrences, level, cameraPositions, resolution, sphereCount, fovX, considerTransparentOpaque, adjacencyDepth)",
+        "description": "Delete parts, patches or polygons not viewed from spheres generated with a set of camera position"
+    },
+    "algo.hiddenRemovalViewPoints": {
+        "prefix": "algo.hiddenRemovalViewPoints",
+        "body": "algo.hiddenRemovalViewPoints(occurrences, level, cameraPositions, cameraDirections, cameraUps, resolution, fovX, considerTransparentOpaque, adjacencyDepth)",
+        "description": "Delete parts, patches or polygons not viewed from a set of camera position/orientation"
+    },
+    "algo.hiddenSelection": {
+        "prefix": "algo.hiddenSelection",
+        "body": "algo.hiddenSelection(occurrences, resolution, sphereCount, fovX, considerTransparentOpaque)",
+        "description": "Select parts not viewed from a sphere around the scene"
+    },
+    "algo.smartHiddenCreateVisibilityInformation": {
+        "prefix": "algo.smartHiddenCreateVisibilityInformation",
+        "body": "algo.smartHiddenCreateVisibilityInformation(occurrences, voxelSize, minimumCavityVolume, resolution, mode, considerTransparentOpaque)",
+        "description": "Create visilibity information on parts viewed from a set of camera automatically generated"
+    },
+    "algo.smartHiddenRemoval": {
+        "prefix": "algo.smartHiddenRemoval",
+        "body": "algo.smartHiddenRemoval(occurrences, level, voxelSize, minimumCavityVolume, resolution, mode, considerTransparentOpaque, adjacencyDepth)",
+        "description": "Delete parts, patches or polygons not viewed from a set of camera automatically generated"
+    },
+    "algo.smartHiddenSelection": {
+        "prefix": "algo.smartHiddenSelection",
+        "body": "algo.smartHiddenSelection(occurrences, voxelSize, minimumCavityVolume, resolution, mode, considerTransparentOpaque)",
+        "description": "Select parts not viewed from a set of camera automatically generated"
+    },
+    "algo.sawWithAABB": {
+        "prefix": "algo.sawWithAABB",
+        "body": "algo.sawWithAABB(occurrences, aabb, mode, innerSuffix, outerSuffix)",
+        "description": "Saw the mesh with an axis-aligned bounding box"
+    },
+    "algo.sawWithOBB": {
+        "prefix": "algo.sawWithOBB",
+        "body": "algo.sawWithOBB(occurrences, obb, mode, innerSuffix, outerSuffix)",
+        "description": "Saw the mesh with an oriented bounding box"
+    },
+    "algo.sawWithPlane": {
+        "prefix": "algo.sawWithPlane",
+        "body": "algo.sawWithPlane(occurrences, planeOrigin, planeNormal, mode, innerSuffix, outerSuffix)",
+        "description": "Saw the mesh with a plane"
+    },
+    "algo.applyUvTransform": {
+        "prefix": "algo.applyUvTransform",
+        "body": "algo.applyUvTransform(occurrences, matrix, channel)",
+        "description": "Apply a transformation matrix on texture coordinates"
+    },
+    "algo.automaticUVMapping": {
+        "prefix": "algo.automaticUVMapping",
+        "body": "algo.automaticUVMapping(occurrences, channel, maxAngleDistorsion, maxAreaDistorsion, sharpToSeam, forbidOverlapping)",
+        "description": "Generates the texture coordinates and automatically cut"
+    },
+    "algo.copyUV": {
+        "prefix": "algo.copyUV",
+        "body": "algo.copyUV(occurrences, sourceChannel, destinationChannel)",
+        "description": "Copy an UV channel to another UV channel"
+    },
+    "algo.deletePolygonalWeightAttribute": {
+        "prefix": "algo.deletePolygonalWeightAttribute",
+        "body": "algo.deletePolygonalWeightAttribute(occurrences)",
+        "description": "Delete Polygonal Weight attributes on tessellations"
+    },
+    "algo.flattenUV": {
+        "prefix": "algo.flattenUV",
+        "body": "algo.flattenUV(occurrences, channel, iterations, newtonTolf)",
+        "description": "Flatten the UVs on the occurrence"
+    },
+    "algo.getRatioUV3D": {
+        "prefix": "algo.getRatioUV3D",
+        "body": "algo.getRatioUV3D(occurrences, ratioMode, channel)",
+        "description": "Compute the ratio between the UV and the 3D size"
+    },
+    "algo.mapUvOnAABB": {
+        "prefix": "algo.mapUvOnAABB",
+        "body": "algo.mapUvOnAABB(occurrences, useLocalAABB, uv3dSize, channel, overrideExistingUVs, ignoreScale)",
+        "description": "Generate texture coordinates using the projection on object Axis Aligned Bounding Box"
+    },
+    "algo.mapUvOnBox": {
+        "prefix": "algo.mapUvOnBox",
+        "body": "algo.mapUvOnBox(occurrences, box, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on a box"
+    },
+    "algo.mapUvOnCubicAABB": {
+        "prefix": "algo.mapUvOnCubicAABB",
+        "body": "algo.mapUvOnCubicAABB(occurrences, uv3dSize, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on object AABB, with same scale on each axis"
+    },
+    "algo.mapUvOnCustomAABB": {
+        "prefix": "algo.mapUvOnCustomAABB",
+        "body": "algo.mapUvOnCustomAABB(occurrences, aabb, uv3dSize, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on custom AABB"
+    },
+    "algo.mapUvOnCylinder": {
+        "prefix": "algo.mapUvOnCylinder",
+        "body": "algo.mapUvOnCylinder(occurrences, cylinder, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on a cylinder"
+    },
+    "algo.mapUvOnFittingCylinder": {
+        "prefix": "algo.mapUvOnFittingCylinder",
+        "body": "algo.mapUvOnFittingCylinder(occurrences, channel, overrideExistingUVs, useAABB)",
+        "description": "Generate texture coordinates using the projection on a fitting cylinder"
+    },
+    "algo.mapUvOnFittingSphere": {
+        "prefix": "algo.mapUvOnFittingSphere",
+        "body": "algo.mapUvOnFittingSphere(occurrences, channel, overrideExistingUVs, useAABB)",
+        "description": "Generate texture coordinates using the projection on a fitting sphere"
+    },
+    "algo.mapUvOnMBB": {
+        "prefix": "algo.mapUvOnMBB",
+        "body": "algo.mapUvOnMBB(occurrences, useLocalMBB, uv3dSize, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on object Minimum Bounding Box"
+    },
+    "algo.mapUvOnPlane": {
+        "prefix": "algo.mapUvOnPlane",
+        "body": "algo.mapUvOnPlane(occurrences, plane, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on a plane"
+    },
+    "algo.mapUvOnSphere": {
+        "prefix": "algo.mapUvOnSphere",
+        "body": "algo.mapUvOnSphere(occurrences, sphere, channel, overrideExistingUVs)",
+        "description": "Generate texture coordinates using the projection on a sphere"
+    },
+    "algo.mergeUVIslands": {
+        "prefix": "algo.mergeUVIslands",
+        "body": "algo.mergeUVIslands(occurrences, usePolygonsWeights, channel, maxScaleVariationFactor, useVerticesWeights, scaleWeights, curvatureWeights)",
+        "description": "Minimizes the number of seams in the UV mapping"
+    },
+    "algo.normalizeUV": {
+        "prefix": "algo.normalizeUV",
+        "body": "algo.normalizeUV(occurrences, sourceUVChannel, destinationUVChannel, uniform, sharedUVSpace, ignoreNullIslands)",
+        "description": "Normalize UVs to fit in the [0-1] uv space"
+    },
+    "algo.relaxUV": {
+        "prefix": "algo.relaxUV",
+        "body": "algo.relaxUV(occurrences, method, iterations, channel)",
+        "description": "Relax UVs"
+    },
+    "algo.removeUV": {
+        "prefix": "algo.removeUV",
+        "body": "algo.removeUV(occurrences, channel)",
+        "description": "Remove one or all UV channel(s)"
+    },
+    "algo.repackUV": {
+        "prefix": "algo.repackUV",
+        "body": "algo.repackUV(occurrences, channel, shareMap, resolution, padding, uniformRatio, iterations, removeOverlaps)",
+        "description": "Pack existing UV (create atlas)"
+    },
+    "algo.resizeUVsToTextureSize": {
+        "prefix": "algo.resizeUVsToTextureSize",
+        "body": "algo.resizeUVsToTextureSize(occurrences, TextureSize, channel)",
+        "description": "Rescale the UV coordinates to fit the input texture size"
+    },
+    "algo.scaleUV": {
+        "prefix": "algo.scaleUV",
+        "body": "algo.scaleUV(occurrences, scaleU, scaleV, channel)",
+        "description": "Apply a scale on texture coordinates"
+    },
+    "algo.segmentDiskFront": {
+        "prefix": "algo.segmentDiskFront",
+        "body": "algo.segmentDiskFront(occurrences, threshold, channel)",
+        "description": "Create UV patches with disk-like topology"
+    },
+    "algo.smoothUV": {
+        "prefix": "algo.smoothUV",
+        "body": "algo.smoothUV(occurrences, iterations, channel)",
+        "description": "Smooth texture coordinates"
+    },
+    "algo.stitchUV": {
+        "prefix": "algo.stitchUV",
+        "body": "algo.stitchUV(occurrences, channel)",
+        "description": "Try to stitch existing UV islands"
+    },
+    "algo.swapUvChannels": {
+        "prefix": "algo.swapUvChannels",
+        "body": "algo.swapUvChannels(occurrences, firstChannel, secondChannel)",
+        "description": "Swap two UV channels"
+    },
+    "algo.transferVisibilityToPolygonalWeight": {
+        "prefix": "algo.transferVisibilityToPolygonalWeight",
+        "body": "algo.transferVisibilityToPolygonalWeight(occurrences, Mode)",
+        "description": "Set Polygonal Weight Attribute from Visibility Attribute"
+    },
+    "algo.getFittingCylinder": {
+        "prefix": "algo.getFittingCylinder",
+        "body": "algo.getFittingCylinder(occurrences, useAABB)",
+        "description": "Returns the fitting cylinder of a set of occurrences (based on MBB)"
+    },
+    "algo.getFittingSphere": {
+        "prefix": "algo.getFittingSphere",
+        "body": "algo.getFittingSphere(occurrences, useAABB)",
+        "description": "Returns the fitting sphere of a set of occurrences"
+    },
+    "algo.bakeMaps": {
+        "prefix": "algo.bakeMaps",
+        "body": "algo.bakeMaps(destinationOccurrences, sourceOccurrences, mapsToBake, channel, resolution, padding, shareMaps, mapSuffix, additionalCustomMaps, tolerance, method, opacityThreshold, useCurrentPosition, offset, callbackList)",
+        "description": "Bake texture maps on meshes from self or other meshes"
+    },
+    "algo.convertNormalMap": {
+        "prefix": "algo.convertNormalMap",
+        "body": "algo.convertNormalMap(occurrences, normalMap, uvChannel, sourceIsObjectSpace, destinationIsObjectSpace, sourceIsRightHanded, destinationIsRightHanded, replaceMap, resolution, padding)",
+        "description": "Convert an existing normal map between Object-space and Tangent-space"
+    },
+    "algo.createBillboard": {
+        "prefix": "algo.createBillboard",
+        "body": "algo.createBillboard(occurrences, resolution, XPositive, XNegative, YPositive, YNegative, ZPositive, ZNegative, moveFacesToCenter, leftHandedNormalMap)",
+        "description": "Create a billboard imposter"
+    },
+    "algo.orientNormalMap": {
+        "prefix": "algo.orientNormalMap",
+        "body": "algo.orientNormalMap(normalMap)",
+        "description": "Orient a tangent space normal map (all Z positive)"
+    },
+    "algo.barySmooth": {
+        "prefix": "algo.barySmooth",
+        "body": "algo.barySmooth(occurrences, iteration)",
+        "description": "Smooth the tessellations by moving the vertices to the barycenter of their neighbors"
+    },
+    "algo.crackMoebiusStrips": {
+        "prefix": "algo.crackMoebiusStrips",
+        "body": "algo.crackMoebiusStrips(occurrences, maxEdgeCount)",
+        "description": "Remove moebius strip by topologically cracking them (make it orientable)"
+    },
+    "algo.crackNonManifoldVertices": {
+        "prefix": "algo.crackNonManifoldVertices",
+        "body": "algo.crackNonManifoldVertices(occurrences)",
+        "description": "Splits non-manifold vertices"
+    },
+    "algo.createCavityOccurrences": {
+        "prefix": "algo.createCavityOccurrences",
+        "body": "algo.createCavityOccurrences(occurrences, voxelSize, minimumCavityVolume, mode, parent)",
+        "description": "Identify cavities and create occurrences to show them"
+    },
+    "algo.invertOrientation": {
+        "prefix": "algo.invertOrientation",
+        "body": "algo.invertOrientation(occurrences)",
+        "description": "Invert the orientation of tessellation elements"
+    },
+    "algo.moebiusCracker": {
+        "prefix": "algo.moebiusCracker",
+        "body": "algo.moebiusCracker(occurrences)",
+        "description": "Splits moebius ring"
+    },
+    "algo.orient": {
+        "prefix": "algo.orient",
+        "body": "algo.orient(occurrences, makeOrientable, useArea, orientStrategy)",
+        "description": "Orient tessellation elements"
+    },
+    "algo.orientFromCamera": {
+        "prefix": "algo.orientFromCamera",
+        "body": "algo.orientFromCamera(occurrences, cameraPosition, cameraDirection, cameraUp, resolution, fovX)",
+        "description": "Properly orient all polygons in the same direction, using a specified viewpoint"
+    },
+    "algo.orientFromFace": {
+        "prefix": "algo.orientFromFace",
+        "body": "algo.orientFromFace()",
+        "description": "Orient all connect polygones in the same orientation of the polygon selectionned"
+    },
+    "algo.orientNormals": {
+        "prefix": "algo.orientNormals",
+        "body": "algo.orientNormals(occurrences)",
+        "description": "Orient existing normal according to the polygons clockwise"
+    },
+    "algo.remeshSurfacicHoles": {
+        "prefix": "algo.remeshSurfacicHoles",
+        "body": "algo.remeshSurfacicHoles(occurrences, maxDiameter)",
+        "description": "Resmesh surfacic holes of tessellations"
+    },
+    "algo.removeDegeneratedPolygons": {
+        "prefix": "algo.removeDegeneratedPolygons",
+        "body": "algo.removeDegeneratedPolygons(occurrences, tolerance)",
+        "description": "Remove some kinds of degenerated polygons"
+    },
+    "algo.removeMultiplePolygon": {
+        "prefix": "algo.removeMultiplePolygon",
+        "body": "algo.removeMultiplePolygon(occurrences)",
+        "description": "Remove multiple polygon"
+    },
+    "algo.removeZFighting": {
+        "prefix": "algo.removeZFighting",
+        "body": "algo.removeZFighting(occurrences)",
+        "description": "Remove Z-fighting (surfaces overlapping) by slightly shrinking the selected parts' surfaces"
+    },
+    "algo.repairMesh": {
+        "prefix": "algo.repairMesh",
+        "body": "algo.repairMesh(occurrences, tolerance, crackNonManifold, orient)",
+        "description": "Launch the repair process to repair a disconnected or not clean tessellation"
+    },
+    "algo.repairNullNormals": {
+        "prefix": "algo.repairNullNormals",
+        "body": "algo.repairNullNormals(occurrences)",
+        "description": "Create normal on an existing normal set when normal is null (polygons appears black)"
+    },
+    "algo.separateToManifold": {
+        "prefix": "algo.separateToManifold",
+        "body": "algo.separateToManifold(occurrences)",
+        "description": "Remove non manifold edges and try to reconnect manifold groups of triangles"
+    },
+    "algo.sewBoundary": {
+        "prefix": "algo.sewBoundary",
+        "body": "algo.sewBoundary(occurrences, maxDistance)",
+        "description": "Sew boundaries between them"
+    },
+    "algo.smartOrient": {
+        "prefix": "algo.smartOrient",
+        "body": "algo.smartOrient(occurrences, voxelSize, minimumCavityVolume, resolution, mode, considerTransparentOpaque, orientStrategy)",
+        "description": "Properly orient all polygons in the same direction, using visibility attributes"
+    },
+    "algo.vertexOffset": {
+        "prefix": "algo.vertexOffset",
+        "body": "algo.vertexOffset(occurrences, offset)",
+        "description": "Move the vertices by the offsset along their normal"
+    },
+    "algo.equilateralize": {
+        "prefix": "algo.equilateralize",
+        "body": "algo.equilateralize(occurrences, maxIterations)",
+        "description": "Sswap edges to make triangles more equilateral"
+    },
+    "algo.quadify": {
+        "prefix": "algo.quadify",
+        "body": "algo.quadify(occurrences)",
+        "description": "Merge all triangle polygons in the meshes to quadrangles"
+    },
+    "algo.requadify": {
+        "prefix": "algo.requadify",
+        "body": "algo.requadify(occurrences, forceFullQuad)",
+        "description": "Advanced function to requadify a triangle tessellation coming from full quad mesh"
+    },
+    "algo.toEditableMesh": {
+        "prefix": "algo.toEditableMesh",
+        "body": "algo.toEditableMesh(occurrences)",
+        "description": "Convert all static mesh to editable mesh"
+    },
+    "algo.toStaticMesh": {
+        "prefix": "algo.toStaticMesh",
+        "body": "algo.toStaticMesh(occurrences)",
+        "description": "Convert all editable mesh to static mesh"
+    },
+    "algo.triangularize": {
+        "prefix": "algo.triangularize",
+        "body": "algo.triangularize(occurrences)",
+        "description": "Split all non-triangle polygons in the meshes to triangles"
+    },
+    "algo.createVertexWeightsFromVertexColors": {
+        "prefix": "algo.createVertexWeightsFromVertexColors",
+        "body": "algo.createVertexWeightsFromVertexColors(occurrences, offset, scale)",
+        "description": "Use vertex colors attributes on meshes of the given occurrence to create vertex weights attributes used by the decimation functions, the finals weights will be computed with w = offset + (red - blue) * scale"
+    },
+    "algo.createVertexWeightsFromVisibilityAttributes": {
+        "prefix": "algo.createVertexWeightsFromVisibilityAttributes",
+        "body": "algo.createVertexWeightsFromVisibilityAttributes(occurrences, offset, scale)",
+        "description": "Use visibility attributes on meshes of the given occurrence to create vertex weights attributes used by the decimation functions. The finals weights will be computed with w = offset + (visibility/maxVisibility) * scale"
+    },
+    "algo.createVisibilityAttributes": {
+        "prefix": "algo.createVisibilityAttributes",
+        "body": "algo.createVisibilityAttributes(occurrences)",
+        "description": "Create visibility attributes on tessellations"
+    },
+    "algo.deleteVisibilityAttributes": {
+        "prefix": "algo.deleteVisibilityAttributes",
+        "body": "algo.deleteVisibilityAttributes(occurrences)",
+        "description": "Delete visibility attributes on tessellations"
+    },
+    "algo.flagVisibilityAttributesOnTransparents": {
+        "prefix": "algo.flagVisibilityAttributesOnTransparents",
+        "body": "algo.flagVisibilityAttributesOnTransparents(occurrences)",
+        "description": "Add one count to all visiblility attributes (poly and patch) on transparent patches"
+    },
+    "cad.configureFunctionLogger": {
+        "prefix": "cad.configureFunctionLogger",
+        "body": "cad.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "cad.setPrecision": {
+        "prefix": "cad.setPrecision",
+        "body": "cad.setPrecision(precision)",
+        "description": "Set the CAD precision"
+    },
+    "cad.test": {
+        "prefix": "cad.test",
+        "body": "cad.test()",
+        "description": ""
+    },
+    "cad.solidIntersection": {
+        "prefix": "cad.solidIntersection",
+        "body": "cad.solidIntersection(A, B)",
+        "description": "perform boolean operation intersection on two bodies (A ^ B)"
+    },
+    "cad.solidSubstraction": {
+        "prefix": "cad.solidSubstraction",
+        "body": "cad.solidSubstraction(A, B)",
+        "description": "perform boolean operation subtract on two bodies (A - B)"
+    },
+    "cad.solidUnion": {
+        "prefix": "cad.solidUnion",
+        "body": "cad.solidUnion(A, B)",
+        "description": "perform boolean operation union on two bodies (A + B)"
+    },
+    "cad.convertCurveIntoNurbs": {
+        "prefix": "cad.convertCurveIntoNurbs",
+        "body": "cad.convertCurveIntoNurbs(curve)",
+        "description": "Convert a curve into a nurbs"
+    },
+    "cad.createBezierCurve": {
+        "prefix": "cad.createBezierCurve",
+        "body": "cad.createBezierCurve(poles)",
+        "description": "Create a Bezier curve"
+    },
+    "cad.createBoundedCurve": {
+        "prefix": "cad.createBoundedCurve",
+        "body": "cad.createBoundedCurve(curve, minBound, maxBound)",
+        "description": "Create a bounded curve from a curve"
+    },
+    "cad.createCircleCurve": {
+        "prefix": "cad.createCircleCurve",
+        "body": "cad.createCircleCurve(radius, matrix)",
+        "description": "Create a new circle"
+    },
+    "cad.createCompositeCurve": {
+        "prefix": "cad.createCompositeCurve",
+        "body": "cad.createCompositeCurve(limitedCurveList)",
+        "description": "Create a composite curve from a list of limited curves"
+    },
+    "cad.createCosinusCurve": {
+        "prefix": "cad.createCosinusCurve",
+        "body": "cad.createCosinusCurve(Amplitude, Offset, Period, matrix)",
+        "description": "Create a cosinus curve"
+    },
+    "cad.createEllipseCurve": {
+        "prefix": "cad.createEllipseCurve",
+        "body": "cad.createEllipseCurve(URadius, VRadius, matrix)",
+        "description": "Create an ellipse curve"
+    },
+    "cad.createHelixCurve": {
+        "prefix": "cad.createHelixCurve",
+        "body": "cad.createHelixCurve(radius, pitch, matrix, trigonometrixOrientation)",
+        "description": "Create an helix curve"
+    },
+    "cad.createHermiteCurve": {
+        "prefix": "cad.createHermiteCurve",
+        "body": "cad.createHermiteCurve(FirstPoint, FirstTangent, SecondPoint, SecondTangent)",
+        "description": "Create a Hermite Curve"
+    },
+    "cad.createHyperbolaCurve": {
+        "prefix": "cad.createHyperbolaCurve",
+        "body": "cad.createHyperbolaCurve(URadius, VRadius, matrix)",
+        "description": "Create an hyperBola curve"
+    },
+    "cad.createIntersectionCurve": {
+        "prefix": "cad.createIntersectionCurve",
+        "body": "cad.createIntersectionCurve(firstSurface, secondSurface, chart, minBounds, maxBounds)",
+        "description": "Create a Intersection Curve"
+    },
+    "cad.createLineCurve": {
+        "prefix": "cad.createLineCurve",
+        "body": "cad.createLineCurve(OriginPt, DirectionPt)",
+        "description": "Create a Line Curve"
+    },
+    "cad.createNURBSCurve": {
+        "prefix": "cad.createNURBSCurve",
+        "body": "cad.createNURBSCurve(degree, knots, poles, weights)",
+        "description": "Create a NURBS curve"
+    },
+    "cad.createParabolaCurve": {
+        "prefix": "cad.createParabolaCurve",
+        "body": "cad.createParabolaCurve(focalLength, matrix)",
+        "description": "Create an parabola curve"
+    },
+    "cad.createPolylineCurve": {
+        "prefix": "cad.createPolylineCurve",
+        "body": "cad.createPolylineCurve(points)",
+        "description": "Create a Polyline curve"
+    },
+    "cad.createSegmentCurve": {
+        "prefix": "cad.createSegmentCurve",
+        "body": "cad.createSegmentCurve(firstPoint, secondPoint)",
+        "description": "Create a segment curve from two given points"
+    },
+    "cad.createSurfacicCurve": {
+        "prefix": "cad.createSurfacicCurve",
+        "body": "cad.createSurfacicCurve(surface, curve2D)",
+        "description": "Create a curve from a surface"
+    },
+    "cad.createTransformedCurve": {
+        "prefix": "cad.createTransformedCurve",
+        "body": "cad.createTransformedCurve(curve, matrix)",
+        "description": "Create a curve from a surface"
+    },
+    "cad.invertCurve": {
+        "prefix": "cad.invertCurve",
+        "body": "cad.invertCurve(curve, precision)",
+        "description": "Invert a curve parametricaly"
+    },
+    "cad.getFaceMaterial": {
+        "prefix": "cad.getFaceMaterial",
+        "body": "cad.getFaceMaterial(face)",
+        "description": "get the material on a face"
+    },
+    "cad.setFaceMaterial": {
+        "prefix": "cad.setFaceMaterial",
+        "body": "cad.setFaceMaterial(face, material)",
+        "description": "set the material on a face"
+    },
+    "cad.addToModel": {
+        "prefix": "cad.addToModel",
+        "body": "cad.addToModel(shape, model)",
+        "description": "Add shape to the model"
+    },
+    "cad.buildFaces": {
+        "prefix": "cad.buildFaces",
+        "body": "cad.buildFaces(surface, loopList)",
+        "description": "Build faces from a surface and a set of loop"
+    },
+    "cad.createModel": {
+        "prefix": "cad.createModel",
+        "body": "cad.createModel()",
+        "description": "Create a new model"
+    },
+    "cad.getAllModelFaces": {
+        "prefix": "cad.getAllModelFaces",
+        "body": "cad.getAllModelFaces(model)",
+        "description": "Get all the face of a model recursively"
+    },
+    "cad.getFace2DArea": {
+        "prefix": "cad.getFace2DArea",
+        "body": "cad.getFace2DArea(face)",
+        "description": "Returns the 2D domain area of a face"
+    },
+    "cad.getModelBodies": {
+        "prefix": "cad.getModelBodies",
+        "body": "cad.getModelBodies(model)",
+        "description": "Get the list of bodies contained in a model"
+    },
+    "cad.getModelBoundaries": {
+        "prefix": "cad.getModelBoundaries",
+        "body": "cad.getModelBoundaries(model)",
+        "description": "Get boundary edges of a model grouped by cycles"
+    },
+    "cad.getModelDomains": {
+        "prefix": "cad.getModelDomains",
+        "body": "cad.getModelDomains(model)",
+        "description": "Get the list of domains (Face or OpenShell) contained in a model"
+    },
+    "cad.getModelEdges": {
+        "prefix": "cad.getModelEdges",
+        "body": "cad.getModelEdges(model)",
+        "description": "Get the list of free edges contained in a model"
+    },
+    "cad.getModelVertices": {
+        "prefix": "cad.getModelVertices",
+        "body": "cad.getModelVertices(model)",
+        "description": "Get the list of free vertices contained in a model"
+    },
+    "cad.getReferencers": {
+        "prefix": "cad.getReferencers",
+        "body": "cad.getReferencers(entity)",
+        "description": "Returns the entities referencing a given CAD entity"
+    },
+    "cad.getUnreferencedEntities": {
+        "prefix": "cad.getUnreferencedEntities",
+        "body": "cad.getUnreferencedEntities()",
+        "description": "Returns all the unreferenced CAD entities"
+    },
+    "cad.evalCurvatureOnCurve": {
+        "prefix": "cad.evalCurvatureOnCurve",
+        "body": "cad.evalCurvatureOnCurve(curve, parameter)",
+        "description": "evaluate curvature on a curve"
+    },
+    "cad.evalCurvatureOnSurface": {
+        "prefix": "cad.evalCurvatureOnSurface",
+        "body": "cad.evalCurvatureOnSurface(surface, parameter)",
+        "description": "evaluate main curvatures on a surface"
+    },
+    "cad.evalOnCurve": {
+        "prefix": "cad.evalOnCurve",
+        "body": "cad.evalOnCurve(curve, parameter, derivation)",
+        "description": "evaluate a point and derivatives on a curve"
+    },
+    "cad.evalOnSurface": {
+        "prefix": "cad.evalOnSurface",
+        "body": "cad.evalOnSurface(surface, parameter, derivation)",
+        "description": "evaluate a point and derivatives on a surface"
+    },
+    "cad.getBodyClosedShells": {
+        "prefix": "cad.getBodyClosedShells",
+        "body": "cad.getBodyClosedShells(body)",
+        "description": "get all closedShells contain in the body"
+    },
+    "cad.getBoundedCurveDefinition": {
+        "prefix": "cad.getBoundedCurveDefinition",
+        "body": "cad.getBoundedCurveDefinition(boundedCurve)",
+        "description": "get all parameters contained in the boundedCurve"
+    },
+    "cad.getCircleCurveDefinition": {
+        "prefix": "cad.getCircleCurveDefinition",
+        "body": "cad.getCircleCurveDefinition(circleCurve)",
+        "description": "get all parameters contained in the circleCurve"
+    },
+    "cad.getClosedShellOrientedDomains": {
+        "prefix": "cad.getClosedShellOrientedDomains",
+        "body": "cad.getClosedShellOrientedDomains(closedShell)",
+        "description": "get all orienteDomains contain in the closedShell"
+    },
+    "cad.getCoEdgeDefinition": {
+        "prefix": "cad.getCoEdgeDefinition",
+        "body": "cad.getCoEdgeDefinition(coEdge)",
+        "description": "get all parameters contained in the coEdge"
+    },
+    "cad.getCompositeCurveDefinition": {
+        "prefix": "cad.getCompositeCurveDefinition",
+        "body": "cad.getCompositeCurveDefinition(compositeCurve)",
+        "description": "get all parameters contained in the compositeCurve"
+    },
+    "cad.getConeSurfaceDefinition": {
+        "prefix": "cad.getConeSurfaceDefinition",
+        "body": "cad.getConeSurfaceDefinition(coneSurface)",
+        "description": "get all parameters contained in the coneSurface"
+    },
+    "cad.getCurveExtrusionSurfaceDefinition": {
+        "prefix": "cad.getCurveExtrusionSurfaceDefinition",
+        "body": "cad.getCurveExtrusionSurfaceDefinition(curveExtrusionSurface)",
+        "description": "get all parameters contained in the curveExtrusionSurface"
+    },
+    "cad.getCurveLimits": {
+        "prefix": "cad.getCurveLimits",
+        "body": "cad.getCurveLimits(curve)",
+        "description": "get the parametric space limits of a curve"
+    },
+    "cad.getCylinderSurfaceDefinition": {
+        "prefix": "cad.getCylinderSurfaceDefinition",
+        "body": "cad.getCylinderSurfaceDefinition(cylinderSurface)",
+        "description": "get all parameters contained in the cylinderSurface"
+    },
+    "cad.getEdgeDefinition": {
+        "prefix": "cad.getEdgeDefinition",
+        "body": "cad.getEdgeDefinition(edge)",
+        "description": "get all parameters contained in the edge"
+    },
+    "cad.getEllipseCurveDefinition": {
+        "prefix": "cad.getEllipseCurveDefinition",
+        "body": "cad.getEllipseCurveDefinition(ellipseCurve)",
+        "description": "get all parameters contained in the ellipseCurve"
+    },
+    "cad.getEllipticConeSurfaceDefinition": {
+        "prefix": "cad.getEllipticConeSurfaceDefinition",
+        "body": "cad.getEllipticConeSurfaceDefinition(ellipticConeSurface)",
+        "description": "get all parameters contained in the ellipticConeSurface"
+    },
+    "cad.getFaceDefinition": {
+        "prefix": "cad.getFaceDefinition",
+        "body": "cad.getFaceDefinition(face)",
+        "description": "get all parameters contain in the face"
+    },
+    "cad.getFaceParametricBoundaries": {
+        "prefix": "cad.getFaceParametricBoundaries",
+        "body": "cad.getFaceParametricBoundaries(face)",
+        "description": "get parametric definition of each face loop"
+    },
+    "cad.getHelixCurveDefinition": {
+        "prefix": "cad.getHelixCurveDefinition",
+        "body": "cad.getHelixCurveDefinition(helixCurve)",
+        "description": "get all parameters contained in the helixCurve"
+    },
+    "cad.getHermiteCurveDefinition": {
+        "prefix": "cad.getHermiteCurveDefinition",
+        "body": "cad.getHermiteCurveDefinition(hermiteCurve)",
+        "description": "get all parameters contained in the hermiteCurve"
+    },
+    "cad.getHyperbolaCurveDefinition": {
+        "prefix": "cad.getHyperbolaCurveDefinition",
+        "body": "cad.getHyperbolaCurveDefinition(hyperbolaCurve)",
+        "description": "get all parameters contained in the hyperbolaCurve"
+    },
+    "cad.getIntersectionCurveDefinition": {
+        "prefix": "cad.getIntersectionCurveDefinition",
+        "body": "cad.getIntersectionCurveDefinition(intersectionCurve)",
+        "description": "get all parameters contained in the intersectionCurve"
+    },
+    "cad.getLineCurveDefinition": {
+        "prefix": "cad.getLineCurveDefinition",
+        "body": "cad.getLineCurveDefinition(lineCurve)",
+        "description": "get all parameters contain in the lineCurve"
+    },
+    "cad.getLoopCoEdges": {
+        "prefix": "cad.getLoopCoEdges",
+        "body": "cad.getLoopCoEdges(loop)",
+        "description": "get all coEdges contain in the loop"
+    },
+    "cad.getNURBSCurveDefinition": {
+        "prefix": "cad.getNURBSCurveDefinition",
+        "body": "cad.getNURBSCurveDefinition(nurbsCurve)",
+        "description": "get all parameters contained in the nurbsCurve"
+    },
+    "cad.getNURBSSurfaceDefinition": {
+        "prefix": "cad.getNURBSSurfaceDefinition",
+        "body": "cad.getNURBSSurfaceDefinition(nurbsSurface)",
+        "description": "get all parameters contained in the nurbsSurface"
+    },
+    "cad.getOffsetCurveDefinition": {
+        "prefix": "cad.getOffsetCurveDefinition",
+        "body": "cad.getOffsetCurveDefinition(offsetCurve)",
+        "description": "get all parameters contained in the offsetCurve"
+    },
+    "cad.getOffsetSurfaceDefinition": {
+        "prefix": "cad.getOffsetSurfaceDefinition",
+        "body": "cad.getOffsetSurfaceDefinition(offsetSurface)",
+        "description": "get all parameters contained in the offsetSurface"
+    },
+    "cad.getOpenShellOrientedDomains": {
+        "prefix": "cad.getOpenShellOrientedDomains",
+        "body": "cad.getOpenShellOrientedDomains(openShell)",
+        "description": "get all orienteDomains contain in the openShell"
+    },
+    "cad.getParabolaCurveDefinition": {
+        "prefix": "cad.getParabolaCurveDefinition",
+        "body": "cad.getParabolaCurveDefinition(parabolaCurve)",
+        "description": "get all parameters contained in the parabolaCurve"
+    },
+    "cad.getPlaneSurfaceDefinition": {
+        "prefix": "cad.getPlaneSurfaceDefinition",
+        "body": "cad.getPlaneSurfaceDefinition(planeSurface)",
+        "description": "get all parameters contained in the planeSurface"
+    },
+    "cad.getPolylineCurveDefinition": {
+        "prefix": "cad.getPolylineCurveDefinition",
+        "body": "cad.getPolylineCurveDefinition(polylineCurve)",
+        "description": "get all parameters contained in the polylinCurve"
+    },
+    "cad.getRevolutionSurfaceDefinition": {
+        "prefix": "cad.getRevolutionSurfaceDefinition",
+        "body": "cad.getRevolutionSurfaceDefinition(revolutionSurface)",
+        "description": "get all parameters contained in the revolutionSurface"
+    },
+    "cad.getRuledSurfaceDefinition": {
+        "prefix": "cad.getRuledSurfaceDefinition",
+        "body": "cad.getRuledSurfaceDefinition(ruledSurface)",
+        "description": "get all parameters contained in the ruledSurface"
+    },
+    "cad.getSegmentCurveDefinition": {
+        "prefix": "cad.getSegmentCurveDefinition",
+        "body": "cad.getSegmentCurveDefinition(segmentCurve)",
+        "description": "get all parameters contained in the segmentCurve"
+    },
+    "cad.getSphereSurfaceDefinition": {
+        "prefix": "cad.getSphereSurfaceDefinition",
+        "body": "cad.getSphereSurfaceDefinition(sphereSurface)",
+        "description": "get all parameters contained in the sphereSurface"
+    },
+    "cad.getSurfaceLimits": {
+        "prefix": "cad.getSurfaceLimits",
+        "body": "cad.getSurfaceLimits(surface)",
+        "description": "get the parametric space limits of a surface"
+    },
+    "cad.getSurfacicCurveDefinition": {
+        "prefix": "cad.getSurfacicCurveDefinition",
+        "body": "cad.getSurfacicCurveDefinition(surfacicCurve)",
+        "description": "get all parameters contained in the surfacicCurve"
+    },
+    "cad.getTabulatedCylinderSurfaceDefinition": {
+        "prefix": "cad.getTabulatedCylinderSurfaceDefinition",
+        "body": "cad.getTabulatedCylinderSurfaceDefinition(tabulatedCylinderSurface)",
+        "description": "get all parameters contained in the TabulatedCylinderSurface"
+    },
+    "cad.getTorusSurfaceDefinition": {
+        "prefix": "cad.getTorusSurfaceDefinition",
+        "body": "cad.getTorusSurfaceDefinition(torusSurface)",
+        "description": "get all parameters contained in the torusSurface"
+    },
+    "cad.getTransformedCurveDefinition": {
+        "prefix": "cad.getTransformedCurveDefinition",
+        "body": "cad.getTransformedCurveDefinition(transformedCurve)",
+        "description": "get all parameters contained in the transformedCurve"
+    },
+    "cad.getVertexPosition": {
+        "prefix": "cad.getVertexPosition",
+        "body": "cad.getVertexPosition(vertex)",
+        "description": "get the position of the vertex"
+    },
+    "cad.invertOnCurve": {
+        "prefix": "cad.invertOnCurve",
+        "body": "cad.invertOnCurve(curve, point, precision)",
+        "description": "invert a point to a curve"
+    },
+    "cad.invertOnSurface": {
+        "prefix": "cad.invertOnSurface",
+        "body": "cad.invertOnSurface(surface, point, precision)",
+        "description": "invert a point to a surface"
+    },
+    "cad.isCurveClosed": {
+        "prefix": "cad.isCurveClosed",
+        "body": "cad.isCurveClosed(curve)",
+        "description": "if the curve is closed, return true, return false otherwise"
+    },
+    "cad.isCurvePeriodic": {
+        "prefix": "cad.isCurvePeriodic",
+        "body": "cad.isCurvePeriodic(curve)",
+        "description": "if the curve is periodic return true, return false otherwise"
+    },
+    "cad.isSurfaceClosed": {
+        "prefix": "cad.isSurfaceClosed",
+        "body": "cad.isSurfaceClosed(surface)",
+        "description": "return if the surface is closed on U or on V"
+    },
+    "cad.isSurfacePeriodic": {
+        "prefix": "cad.isSurfacePeriodic",
+        "body": "cad.isSurfacePeriodic(surface)",
+        "description": "return if the surface is periodic on U or on V"
+    },
+    "cad.projectOnCurve": {
+        "prefix": "cad.projectOnCurve",
+        "body": "cad.projectOnCurve(curve, point, precision)",
+        "description": "project a point to a curve"
+    },
+    "cad.projectOnSurface": {
+        "prefix": "cad.projectOnSurface",
+        "body": "cad.projectOnSurface(surface, point, precision)",
+        "description": "project a point to a surface"
+    },
+    "cad.createBody": {
+        "prefix": "cad.createBody",
+        "body": "cad.createBody(outerShell, innerShells)",
+        "description": "Create a body from a surface"
+    },
+    "cad.createClosedShell": {
+        "prefix": "cad.createClosedShell",
+        "body": "cad.createClosedShell(domains, orientations)",
+        "description": "Create a closedShell from a set of domains of a set of orientations"
+    },
+    "cad.createCoEdge": {
+        "prefix": "cad.createCoEdge",
+        "body": "cad.createCoEdge(edge, orientation, surface, curve2D)",
+        "description": "Create an coEdge with a edge and an orientation"
+    },
+    "cad.createEdge": {
+        "prefix": "cad.createEdge",
+        "body": "cad.createEdge(curve, startVertex, endVertex)",
+        "description": "Create an edge with a curve an extremity vertices"
+    },
+    "cad.createEdgeFromCurve": {
+        "prefix": "cad.createEdgeFromCurve",
+        "body": "cad.createEdgeFromCurve(curve)",
+        "description": "Create an edge from a limited curve"
+    },
+    "cad.createFace": {
+        "prefix": "cad.createFace",
+        "body": "cad.createFace(surface, loopList, useSurfaceOrientation)",
+        "description": "Create a face from a surface"
+    },
+    "cad.createLoop": {
+        "prefix": "cad.createLoop",
+        "body": "cad.createLoop(coEdges, check)",
+        "description": "Create a loop from a set of edges of a set of orientations"
+    },
+    "cad.createOpenShell": {
+        "prefix": "cad.createOpenShell",
+        "body": "cad.createOpenShell(domains, orientations, loopList)",
+        "description": "Create a openShell from a set of domains of a set of orientations and set of loops"
+    },
+    "cad.createVertex": {
+        "prefix": "cad.createVertex",
+        "body": "cad.createVertex(position)",
+        "description": "Create a vertex from a position"
+    },
+    "cad.convertSurfaceIntoNurbs": {
+        "prefix": "cad.convertSurfaceIntoNurbs",
+        "body": "cad.convertSurfaceIntoNurbs(surface, minBoundsU, maxBoundsU, minBoundsV, maxBoundsV)",
+        "description": "Convert a surface into a nurbs"
+    },
+    "cad.createBezierSurface": {
+        "prefix": "cad.createBezierSurface",
+        "body": "cad.createBezierSurface(degreeU, degreeV, poles)",
+        "description": "Create a new bezier surface"
+    },
+    "cad.createConeSurface": {
+        "prefix": "cad.createConeSurface",
+        "body": "cad.createConeSurface(radius, semiAngle, matrix)",
+        "description": "Create a new cone surface"
+    },
+    "cad.createCurveExtrusionSurface": {
+        "prefix": "cad.createCurveExtrusionSurface",
+        "body": "cad.createCurveExtrusionSurface(generatrixCurve, directrixCurve, refSurface, precision)",
+        "description": "Create a new curveExtrusion surface"
+    },
+    "cad.createCylinderSurface": {
+        "prefix": "cad.createCylinderSurface",
+        "body": "cad.createCylinderSurface(radius, matrix)",
+        "description": "Create a new cylinder surface"
+    },
+    "cad.createEllipticConeSurface": {
+        "prefix": "cad.createEllipticConeSurface",
+        "body": "cad.createEllipticConeSurface(radius1, radius2, semiAngle, matrix)",
+        "description": "Create a new elliptic cone surface"
+    },
+    "cad.createNURBSSurface": {
+        "prefix": "cad.createNURBSSurface",
+        "body": "cad.createNURBSSurface(degreeU, degreeV, knotsU, knotsV, poles, weights)",
+        "description": "Create a new NURBS surface"
+    },
+    "cad.createOffsetSurface": {
+        "prefix": "cad.createOffsetSurface",
+        "body": "cad.createOffsetSurface(baseSurface, distance)",
+        "description": "Create a new offset surface"
+    },
+    "cad.createPlaneSurface": {
+        "prefix": "cad.createPlaneSurface",
+        "body": "cad.createPlaneSurface(matrix)",
+        "description": "Create a new plane surface"
+    },
+    "cad.createRevolutionSurface": {
+        "prefix": "cad.createRevolutionSurface",
+        "body": "cad.createRevolutionSurface(generatrixCurve, axisOrigin, axisDirection, startAngle, endAngle)",
+        "description": "Create a new revolution surface"
+    },
+    "cad.createRuledSurface": {
+        "prefix": "cad.createRuledSurface",
+        "body": "cad.createRuledSurface(firstCurve, secondCurve)",
+        "description": "Create a new ruled surface"
+    },
+    "cad.createSphereSurface": {
+        "prefix": "cad.createSphereSurface",
+        "body": "cad.createSphereSurface(radius, matrix)",
+        "description": "Create a new sphere surface"
+    },
+    "cad.createTabulatedCylinderSurface": {
+        "prefix": "cad.createTabulatedCylinderSurface",
+        "body": "cad.createTabulatedCylinderSurface(directrixCurve, GeneratixLine, minRange, maxRange)",
+        "description": "Create a new tabulated cylinder surface"
+    },
+    "cad.createTorusSurface": {
+        "prefix": "cad.createTorusSurface",
+        "body": "cad.createTorusSurface(radiusMax, radiusMin, matrix)",
+        "description": "Create a new torus surface"
+    },
+    "cartier.CreateInstanceByPartName": {
+        "prefix": "cartier.CreateInstanceByPartName",
+        "body": "cartier.CreateInstanceByPartName()",
+        "description": "Create Instance from Part Name, to help reducing file size"
+    },
+    "cartier.Export": {
+        "prefix": "cartier.Export",
+        "body": "cartier.Export(ProductName, Extension, DirectoryPath, CSVname)",
+        "description": "Load a product from a folder"
+    },
+    "cartier.ExportScenario": {
+        "prefix": "cartier.ExportScenario",
+        "body": "cartier.ExportScenario(SaveScenarioAs, ScenarioParameters)",
+        "description": "Configure and Export a custom scenario to a json file"
+    },
+    "cartier.LaunchScenario": {
+        "prefix": "cartier.LaunchScenario",
+        "body": "cartier.LaunchScenario(ScenarioConfiguration)",
+        "description": "Process a scenario from a product folder"
+    },
+    "cartier.LoadProcessedProduct": {
+        "prefix": "cartier.LoadProcessedProduct",
+        "body": "cartier.LoadProcessedProduct(Path)",
+        "description": "Load a processed product from a folder"
+    },
+    "cartier.LoadProduct": {
+        "prefix": "cartier.LoadProduct",
+        "body": "cartier.LoadProduct(ProductFolder, extensions)",
+        "description": "Load a product from a folder"
+    },
+    "cartier.RemoveBlenderNameCounter": {
+        "prefix": "cartier.RemoveBlenderNameCounter",
+        "body": "cartier.RemoveBlenderNameCounter()",
+        "description": "Blender software doesn't like to have multiple node with the same name, so it add a suffix to the name to count the node, example: name -> name.00X We don't want our occurence to be rename to keep a good understanding"
+    },
+    "cartier.RemoveUnwantedParts": {
+        "prefix": "cartier.RemoveUnwantedParts",
+        "body": "cartier.RemoveUnwantedParts(unwantedParts)",
+        "description": "Remove specified sub part from the assemblies loaded"
+    },
+    "cartier.ResolveDataIssues": {
+        "prefix": "cartier.ResolveDataIssues",
+        "body": "cartier.ResolveDataIssues()",
+        "description": "Solve some issues encountered in data, such as: Merge last unknown occurence level, Rename undefined part based on the name of their parent, Add suffix to all geometry node (since they have the same name than their parent)"
+    },
+    "cartier.Tesselate": {
+        "prefix": "cartier.Tesselate",
+        "body": "cartier.Tesselate()",
+        "description": "Tesselate mesh with default behavior"
+    },
+    "cloud.configureFunctionLogger": {
+        "prefix": "cloud.configureFunctionLogger",
+        "body": "cloud.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "cloud.downloadDirectoryFromS3": {
+        "prefix": "cloud.downloadDirectoryFromS3",
+        "body": "cloud.downloadDirectoryFromS3(bucketName, region, directoryPath, directory)",
+        "description": ""
+    },
+    "cloud.downloadFileFromS3": {
+        "prefix": "cloud.downloadFileFromS3",
+        "body": "cloud.downloadFileFromS3(bucketName, region, filePath, directory)",
+        "description": ""
+    },
+    "cloud.listFilesFromS3": {
+        "prefix": "cloud.listFilesFromS3",
+        "body": "cloud.listFilesFromS3(bucketName, region, prefix)",
+        "description": ""
+    },
+    "cloud.uploadDirectoryToS3": {
+        "prefix": "cloud.uploadDirectoryToS3",
+        "body": "cloud.uploadDirectoryToS3(bucketName, region, directoryPath, directory)",
+        "description": ""
+    },
+    "cloud.uploadFileToS3": {
+        "prefix": "cloud.uploadFileToS3",
+        "body": "cloud.uploadFileToS3(bucketName, region, filePath, directory)",
+        "description": ""
+    },
+    "cloud.uploadFilesToS3": {
+        "prefix": "cloud.uploadFilesToS3",
+        "body": "cloud.uploadFilesToS3(bucketName, region, filePaths, directory)",
+        "description": ""
+    },
+    "core.cloneEntity": {
+        "prefix": "core.cloneEntity",
+        "body": "core.cloneEntity(entity)",
+        "description": "Clone an entity"
+    },
+    "core.configureFunctionLogger": {
+        "prefix": "core.configureFunctionLogger",
+        "body": "core.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "core.crash": {
+        "prefix": "core.crash",
+        "body": "core.crash()",
+        "description": "The only function in Pixyz to crash except undo/redo"
+    },
+    "core.deleteEntities": {
+        "prefix": "core.deleteEntities",
+        "body": "core.deleteEntities(entities)",
+        "description": "Delete a set of entities"
+    },
+    "core.generateHTMLDocumentation": {
+        "prefix": "core.generateHTMLDocumentation",
+        "body": "core.generateHTMLDocumentation(output)",
+        "description": "Generate the documentation of available functions in HTML format"
+    },
+    "core.resetSession": {
+        "prefix": "core.resetSession",
+        "body": "core.resetSession()",
+        "description": "Clear all the current session (all unsaved work will be lost)"
+    },
+    "core.unsavedUserChanges": {
+        "prefix": "core.unsavedUserChanges",
+        "body": "core.unsavedUserChanges()",
+        "description": "Returns true if the user has made changes to the project"
+    },
+    "core.updateDocumentation": {
+        "prefix": "core.updateDocumentation",
+        "body": "core.updateDocumentation()",
+        "description": "Update the documentation of available functions and plugins in HTML format"
+    },
+    "core.getEvent": {
+        "prefix": "core.getEvent",
+        "body": "core.getEvent(moduleName, eventName)",
+        "description": "get EventDesc of an event"
+    },
+    "core.getFunction": {
+        "prefix": "core.getFunction",
+        "body": "core.getFunction(moduleName, functionName)",
+        "description": "get FunctionDesc of a function"
+    },
+    "core.getFunctions": {
+        "prefix": "core.getFunctions",
+        "body": "core.getFunctions(moduleName, groupName)",
+        "description": "get functions of a group"
+    },
+    "core.getGroup": {
+        "prefix": "core.getGroup",
+        "body": "core.getGroup(moduleName, groupName)",
+        "description": "get a group desc from a specific module"
+    },
+    "core.getGroups": {
+        "prefix": "core.getGroups",
+        "body": "core.getGroups(moduleName)",
+        "description": "get all group desc of a module"
+    },
+    "core.getModules": {
+        "prefix": "core.getModules",
+        "body": "core.getModules()",
+        "description": "get all modules desc"
+    },
+    "core.getModulesName": {
+        "prefix": "core.getModulesName",
+        "body": "core.getModulesName()",
+        "description": "get all modules name"
+    },
+    "core.getType": {
+        "prefix": "core.getType",
+        "body": "core.getType(moduleName, typeNameStr)",
+        "description": "get TypeDesc from a type name"
+    },
+    "core.getTypeAttributes": {
+        "prefix": "core.getTypeAttributes",
+        "body": "core.getTypeAttributes(moduleName, typeNameStr)",
+        "description": "get attributes TypeDesc from a type name"
+    },
+    "core.getTypeDescription": {
+        "prefix": "core.getTypeDescription",
+        "body": "core.getTypeDescription(name, moduleName)",
+        "description": "get type description"
+    },
+    "core.softStopAsyncEventManager": {
+        "prefix": "core.softStopAsyncEventManager",
+        "body": "core.softStopAsyncEventManager()",
+        "description": "Ask the async EventManager to join the main thread, enableEventManagerAsync must be enable"
+    },
+    "core.lockProcessing": {
+        "prefix": "core.lockProcessing",
+        "body": "core.lockProcessing()",
+        "description": "Lock the mutex that ensure no processing is done between lock/unlock"
+    },
+    "core.tryLockProcessing": {
+        "prefix": "core.tryLockProcessing",
+        "body": "core.tryLockProcessing()",
+        "description": "Try to lock the mutex that ensure no processing is done between lock/unlock, returns true if the mutex has been locked, false if it was already locked"
+    },
+    "core.unlockProcessing": {
+        "prefix": "core.unlockProcessing",
+        "body": "core.unlockProcessing()",
+        "description": "Unlock the mutex that ensure no processing is done between lock/unlock"
+    },
+    "core.askString": {
+        "prefix": "core.askString",
+        "body": "core.askString(msg, defaultValue)",
+        "description": "Invite the user to enter a string"
+    },
+    "core.askYesNo": {
+        "prefix": "core.askYesNo",
+        "body": "core.askYesNo(question, defaultValue)",
+        "description": "Ask a question which need a Yes/No answer"
+    },
+    "core.choose": {
+        "prefix": "core.choose",
+        "body": "core.choose(message, values, defaultValue)",
+        "description": "Invite the user to choose one value between multiple choice"
+    },
+    "core.isInteractiveMode": {
+        "prefix": "core.isInteractiveMode",
+        "body": "core.isInteractiveMode()",
+        "description": "Returns True if the script is in interactive mode, else returns false"
+    },
+    "core.message": {
+        "prefix": "core.message",
+        "body": "core.message(msg)",
+        "description": "Display a message (or a MessageBox in GUI)"
+    },
+    "core.setInteractiveMode": {
+        "prefix": "core.setInteractiveMode",
+        "body": "core.setInteractiveMode(interactive)",
+        "description": "Switch between interactive mode and non-interactive mode, UI functions will no ask user on non-interactive mode and will return default values"
+    },
+    "core.getAllEntities": {
+        "prefix": "core.getAllEntities",
+        "body": "core.getAllEntities()",
+        "description": "returns all the entities on the database"
+    },
+    "core.getEntityType": {
+        "prefix": "core.getEntityType",
+        "body": "core.getEntityType(entity)",
+        "description": "returns the type id of the entity"
+    },
+    "core.getEntityTypeFromString": {
+        "prefix": "core.getEntityTypeFromString",
+        "body": "core.getEntityTypeFromString(entityTypeString)",
+        "description": "returns the type id of the entity"
+    },
+    "core.getEntityTypeString": {
+        "prefix": "core.getEntityTypeString",
+        "body": "core.getEntityTypeString(entity)",
+        "description": "returns the type name of the entity"
+    },
+    "core.getTypeStats": {
+        "prefix": "core.getTypeStats",
+        "body": "core.getTypeStats()",
+        "description": "Get the database stats"
+    },
+    "core.load": {
+        "prefix": "core.load",
+        "body": "core.load(fileName)",
+        "description": "Load a new scene"
+    },
+    "core.save": {
+        "prefix": "core.save",
+        "body": "core.save(fileName)",
+        "description": "Save the scene"
+    },
+    "core.exportPresets": {
+        "prefix": "core.exportPresets",
+        "body": "core.exportPresets(fileName)",
+        "description": "Export all presets"
+    },
+    "core.importPresets": {
+        "prefix": "core.importPresets",
+        "body": "core.importPresets(fileName)",
+        "description": "Import presets from file"
+    },
+    "core.removeAllPresets": {
+        "prefix": "core.removeAllPresets",
+        "body": "core.removeAllPresets()",
+        "description": "Remove all presets"
+    },
+    "core.addWantedToken": {
+        "prefix": "core.addWantedToken",
+        "body": "core.addWantedToken(tokenName)",
+        "description": "Add a license token to the list of wanted optional tokens"
+    },
+    "core.checkLicense": {
+        "prefix": "core.checkLicense",
+        "body": "core.checkLicense()",
+        "description": "check the current license"
+    },
+    "core.configureLicenseServer": {
+        "prefix": "core.configureLicenseServer",
+        "body": "core.configureLicenseServer(address, port, flexLM)",
+        "description": "Configure the license server to use to get floating licenses"
+    },
+    "core.generateActivationCode": {
+        "prefix": "core.generateActivationCode",
+        "body": "core.generateActivationCode(filePath)",
+        "description": "Create an activation code to generate an offline license"
+    },
+    "core.generateDeactivationCode": {
+        "prefix": "core.generateDeactivationCode",
+        "body": "core.generateDeactivationCode(filePath)",
+        "description": "Create an deactivation code to release the license from this machine"
+    },
+    "core.getCurrentLicenseInfos": {
+        "prefix": "core.getCurrentLicenseInfos",
+        "body": "core.getCurrentLicenseInfos()",
+        "description": "get information on current installed license"
+    },
+    "core.getLicenseServer": {
+        "prefix": "core.getLicenseServer",
+        "body": "core.getLicenseServer()",
+        "description": "Get current license server"
+    },
+    "core.installLicense": {
+        "prefix": "core.installLicense",
+        "body": "core.installLicense(licensePath)",
+        "description": "install a new license"
+    },
+    "core.isFloatingLicense": {
+        "prefix": "core.isFloatingLicense",
+        "body": "core.isFloatingLicense()",
+        "description": "Tells if license is floating"
+    },
+    "core.listOwnedTokens": {
+        "prefix": "core.listOwnedTokens",
+        "body": "core.listOwnedTokens()",
+        "description": "Get the list of actually owned license tokens"
+    },
+    "core.listTokens": {
+        "prefix": "core.listTokens",
+        "body": "core.listTokens(onlyMandatory)",
+        "description": "Get the list of license tokens for this product"
+    },
+    "core.needToken": {
+        "prefix": "core.needToken",
+        "body": "core.needToken(tokenName)",
+        "description": "Ensure that a license token is available, useful to be sure to own floatting licence tokens"
+    },
+    "core.releaseToken": {
+        "prefix": "core.releaseToken",
+        "body": "core.releaseToken(tokenName)",
+        "description": "Release an optional license token"
+    },
+    "core.releaseWebLicense": {
+        "prefix": "core.releaseWebLicense",
+        "body": "core.releaseWebLicense(login, password, id)",
+        "description": "release License owned by user WEB account"
+    },
+    "core.removeWantedToken": {
+        "prefix": "core.removeWantedToken",
+        "body": "core.removeWantedToken(tokenName)",
+        "description": "remove a license token from the list of wanted optional tokens"
+    },
+    "core.requestWebLicense": {
+        "prefix": "core.requestWebLicense",
+        "body": "core.requestWebLicense(login, password, id)",
+        "description": "request License owned by user WEB account"
+    },
+    "core.retrieveWebLicenses": {
+        "prefix": "core.retrieveWebLicenses",
+        "body": "core.retrieveWebLicenses(login, password)",
+        "description": "Retrieves License owned by user WEB account"
+    },
+    "core.tokenValid": {
+        "prefix": "core.tokenValid",
+        "body": "core.tokenValid(tokenName)",
+        "description": "Returns True if a token is owned by the product"
+    },
+    "core.getOutputFilePath": {
+        "prefix": "core.getOutputFilePath",
+        "body": "core.getOutputFilePath(fileName, data)",
+        "description": "Return a complete output file path for Pixyz Pipeline, this function is useful for online usage when you know where is the output directory"
+    },
+    "core.executeCommand": {
+        "prefix": "core.executeCommand",
+        "body": "core.executeCommand(cmd)",
+        "description": "Execute a command"
+    },
+    "core.installPlugin": {
+        "prefix": "core.installPlugin",
+        "body": "core.installPlugin(pluginFile, installForAllUsers, generateDocumentation)",
+        "description": "Install a new plugin"
+    },
+    "core.popProgression": {
+        "prefix": "core.popProgression",
+        "body": "core.popProgression()",
+        "description": "Leave current progression level"
+    },
+    "core.pushProgression": {
+        "prefix": "core.pushProgression",
+        "body": "core.pushProgression(stepCount, progressName)",
+        "description": "Create a new progression level"
+    },
+    "core.stepProgression": {
+        "prefix": "core.stepProgression",
+        "body": "core.stepProgression(stepCount)",
+        "description": "Add a step to current progression level"
+    },
+    "core.addCustomProperty": {
+        "prefix": "core.addCustomProperty",
+        "body": "core.addCustomProperty(entity, name, value)",
+        "description": "Add a custom property to an entity that support custom properties"
+    },
+    "core.getModuleProperty": {
+        "prefix": "core.getModuleProperty",
+        "body": "core.getModuleProperty(module, propertyName)",
+        "description": "Returns the value of a module property"
+    },
+    "core.getProperties": {
+        "prefix": "core.getProperties",
+        "body": "core.getProperties(entities, propertyName, defaultValue)",
+        "description": "Get the property value on entities (if the property is not set on an entity, defaultValue is returned)"
+    },
+    "core.getProperty": {
+        "prefix": "core.getProperty",
+        "body": "core.getProperty(entity, propertyName)",
+        "description": "Get a property value as String on an entity (error if the property does not exist on the entity)"
+    },
+    "core.hasProperty": {
+        "prefix": "core.hasProperty",
+        "body": "core.hasProperty(entity, propertyName)",
+        "description": "Return true if the property was found on the occurrence, will not throw any exception except if the entity does not exist."
+    },
+    "core.listModuleProperties": {
+        "prefix": "core.listModuleProperties",
+        "body": "core.listModuleProperties(module)",
+        "description": "Returns all the properties in the given module"
+    },
+    "core.listProperties": {
+        "prefix": "core.listProperties",
+        "body": "core.listProperties(entity)",
+        "description": "Returns the name of the properties available on an entity"
+    },
+    "core.removeCustomProperty": {
+        "prefix": "core.removeCustomProperty",
+        "body": "core.removeCustomProperty(entity, name)",
+        "description": "Remove a custom property from an entity that support custom properties"
+    },
+    "core.restoreModulePropertyDefaultValue": {
+        "prefix": "core.restoreModulePropertyDefaultValue",
+        "body": "core.restoreModulePropertyDefaultValue(module, propertyName)",
+        "description": "Restore the default value of a module property"
+    },
+    "core.setModuleProperty": {
+        "prefix": "core.setModuleProperty",
+        "body": "core.setModuleProperty(module, propertyName, propertyValue)",
+        "description": "Set the value of a module property"
+    },
+    "core.setProperty": {
+        "prefix": "core.setProperty",
+        "body": "core.setProperty(entity, propertyName, propertyValue)",
+        "description": "Set a property value on an entity"
+    },
+    "core.supportCustomProperties": {
+        "prefix": "core.supportCustomProperties",
+        "body": "core.supportCustomProperties(entity)",
+        "description": "Return true if an entity support custom properties"
+    },
+    "core.availableMemory": {
+        "prefix": "core.availableMemory",
+        "body": "core.availableMemory()",
+        "description": "returns available memory"
+    },
+    "core.checkForUpdates": {
+        "prefix": "core.checkForUpdates",
+        "body": "core.checkForUpdates()",
+        "description": "check for software update"
+    },
+    "core.clearOtherTemporaryDirectories": {
+        "prefix": "core.clearOtherTemporaryDirectories",
+        "body": "core.clearOtherTemporaryDirectories()",
+        "description": "remove all other session temporary directories (warning: make sure that no other instance of pixyz is running"
+    },
+    "core.exportFunctionDialogScreen": {
+        "prefix": "core.exportFunctionDialogScreen",
+        "body": "core.exportFunctionDialogScreen(moduleName, functionName, OutputFilePath)",
+        "description": "Test documentation GUI dialog print"
+    },
+    "core.getCustomVersionTag": {
+        "prefix": "core.getCustomVersionTag",
+        "body": "core.getCustomVersionTag()",
+        "description": "get the Pixyz custom version tag"
+    },
+    "core.getInstallationDirectory": {
+        "prefix": "core.getInstallationDirectory",
+        "body": "core.getInstallationDirectory()",
+        "description": "get the Pixyz installation directory"
+    },
+    "core.getMemoryUsagePeak": {
+        "prefix": "core.getMemoryUsagePeak",
+        "body": "core.getMemoryUsagePeak()",
+        "description": "Returns the memory usage peak of the current process in MB ( only available on windows yet )"
+    },
+    "core.getPixyzWebsiteURL": {
+        "prefix": "core.getPixyzWebsiteURL",
+        "body": "core.getPixyzWebsiteURL()",
+        "description": "get the Pixyz website URL"
+    },
+    "core.getProductDocumentationURL": {
+        "prefix": "core.getProductDocumentationURL",
+        "body": "core.getProductDocumentationURL()",
+        "description": "get the product documentation URL"
+    },
+    "core.getProductName": {
+        "prefix": "core.getProductName",
+        "body": "core.getProductName()",
+        "description": "get the Pixyz product name"
+    },
+    "core.getTempDirectory": {
+        "prefix": "core.getTempDirectory",
+        "body": "core.getTempDirectory()",
+        "description": "get the Pixyz temp directory"
+    },
+    "core.getVersion": {
+        "prefix": "core.getVersion",
+        "body": "core.getVersion()",
+        "description": "get the Pixyz product version"
+    },
+    "core.pushAnalytic": {
+        "prefix": "core.pushAnalytic",
+        "body": "core.pushAnalytic(name, data)",
+        "description": "push custom analytic event (Only for authorized products)"
+    },
+    "core.setCurrentThreadAsProcessThread": {
+        "prefix": "core.setCurrentThreadAsProcessThread",
+        "body": "core.setCurrentThreadAsProcessThread()",
+        "description": "set thread"
+    },
+    "core.clearUndoRedo": {
+        "prefix": "core.clearUndoRedo",
+        "body": "core.clearUndoRedo()",
+        "description": "Clear undo/redo history"
+    },
+    "core.endUndoRedoStep": {
+        "prefix": "core.endUndoRedoStep",
+        "body": "core.endUndoRedoStep()",
+        "description": "End current undo/redo step"
+    },
+    "core.getRedoStack": {
+        "prefix": "core.getRedoStack",
+        "body": "core.getRedoStack()",
+        "description": "Get the history of actions stack"
+    },
+    "core.getUndoStack": {
+        "prefix": "core.getUndoStack",
+        "body": "core.getUndoStack()",
+        "description": "Get the history of actions stack"
+    },
+    "core.redo": {
+        "prefix": "core.redo",
+        "body": "core.redo(count)",
+        "description": "redo some steps"
+    },
+    "core.startUndoRedoStep": {
+        "prefix": "core.startUndoRedoStep",
+        "body": "core.startUndoRedoStep(stepName)",
+        "description": "Start a new undo/redo step"
+    },
+    "core.toggleUndoRedo": {
+        "prefix": "core.toggleUndoRedo",
+        "body": "core.toggleUndoRedo()",
+        "description": "Toggle undo/redo"
+    },
+    "core.undo": {
+        "prefix": "core.undo",
+        "body": "core.undo(count)",
+        "description": "undo some steps"
+    },
+    "core.getColorFromIndex": {
+        "prefix": "core.getColorFromIndex",
+        "body": "core.getColorFromIndex(index)",
+        "description": "Returns a unique color associated with an index"
+    },
+    "core.addConsoleVerbose": {
+        "prefix": "core.addConsoleVerbose",
+        "body": "core.addConsoleVerbose(level)",
+        "description": "add a console verbose level"
+    },
+    "core.addLogFileVerbose": {
+        "prefix": "core.addLogFileVerbose",
+        "body": "core.addLogFileVerbose(level)",
+        "description": "add a log file verbose level"
+    },
+    "core.addSessionLogFileVerbose": {
+        "prefix": "core.addSessionLogFileVerbose",
+        "body": "core.addSessionLogFileVerbose(level)",
+        "description": "add a session log file (lastSession.log) verbose level"
+    },
+    "core.configureInterfaceLogger": {
+        "prefix": "core.configureInterfaceLogger",
+        "body": "core.configureInterfaceLogger(enableFunction, enableParameters, enableExecutionTime)",
+        "description": "Set new configuration for the Interface Logger"
+    },
+    "core.getInterfaceLoggerConfiguration": {
+        "prefix": "core.getInterfaceLoggerConfiguration",
+        "body": "core.getInterfaceLoggerConfiguration()",
+        "description": "Get the current Interface Logger configuration"
+    },
+    "core.removeConsoleVerbose": {
+        "prefix": "core.removeConsoleVerbose",
+        "body": "core.removeConsoleVerbose(level)",
+        "description": "remove a console verbose level"
+    },
+    "core.removeLogFileVerbose": {
+        "prefix": "core.removeLogFileVerbose",
+        "body": "core.removeLogFileVerbose(level)",
+        "description": "remove a log file verbose level"
+    },
+    "core.removeSessionLogFileVerbose": {
+        "prefix": "core.removeSessionLogFileVerbose",
+        "body": "core.removeSessionLogFileVerbose(level)",
+        "description": "remove a session log file (lastSession.log) verbose level"
+    },
+    "core.setLogFile": {
+        "prefix": "core.setLogFile",
+        "body": "core.setLogFile(path)",
+        "description": "set the path of the log file"
+    },
+    "geom.applyTransform": {
+        "prefix": "geom.applyTransform",
+        "body": "geom.applyTransform(entity, matrix)",
+        "description": "Apply a transformation matrix to a geometrical entity"
+    },
+    "geom.configureFunctionLogger": {
+        "prefix": "geom.configureFunctionLogger",
+        "body": "geom.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "geom.drawDebug": {
+        "prefix": "geom.drawDebug",
+        "body": "geom.drawDebug(entity)",
+        "description": ""
+    },
+    "geom.getEntityAABB": {
+        "prefix": "geom.getEntityAABB",
+        "body": "geom.getEntityAABB(entity)",
+        "description": "Retrieve the Axis-Aligned Bounded Box of a geometric entity"
+    },
+    "geom.changeOfBasisMatrix": {
+        "prefix": "geom.changeOfBasisMatrix",
+        "body": "geom.changeOfBasisMatrix(origin, x, y, z)",
+        "description": "Construct a Change of Basis Matrix (e.g multiplying the point [0,0,0] will result to the point origin)"
+    },
+    "geom.fromLookAtMatrix": {
+        "prefix": "geom.fromLookAtMatrix",
+        "body": "geom.fromLookAtMatrix(matrix, distanceFromTarget)",
+        "description": "Get camera position, up and target vectors"
+    },
+    "geom.fromOriginNormal": {
+        "prefix": "geom.fromOriginNormal",
+        "body": "geom.fromOriginNormal(origin, normal)",
+        "description": "Create a Matrix from an origin and a normal vector"
+    },
+    "geom.fromTRS": {
+        "prefix": "geom.fromTRS",
+        "body": "geom.fromTRS(T, R, S)",
+        "description": "Create a Matrix from translation, rotation and scaling vectors"
+    },
+    "geom.invertMatrix": {
+        "prefix": "geom.invertMatrix",
+        "body": "geom.invertMatrix(matrix)",
+        "description": "Invert a matrix"
+    },
+    "geom.lookAtMatrix": {
+        "prefix": "geom.lookAtMatrix",
+        "body": "geom.lookAtMatrix(position, up, target)",
+        "description": "Create a matrix from a camera position, up and target"
+    },
+    "geom.multiplyMatrices": {
+        "prefix": "geom.multiplyMatrices",
+        "body": "geom.multiplyMatrices(left, right)",
+        "description": "Multiply two matrices, returns left*right"
+    },
+    "geom.multiplyMatrixPoint": {
+        "prefix": "geom.multiplyMatrixPoint",
+        "body": "geom.multiplyMatrixPoint(matrix, point)",
+        "description": "Multiply a point by a matrix (i.e apply the matrix to a point)"
+    },
+    "geom.multiplyMatrixVector": {
+        "prefix": "geom.multiplyMatrixVector",
+        "body": "geom.multiplyMatrixVector(matrix, vector)",
+        "description": "Multiply a vector by a matrix (i.e apply the matrix to a vector)"
+    },
+    "geom.orthographicMatrix": {
+        "prefix": "geom.orthographicMatrix",
+        "body": "geom.orthographicMatrix(width3D, height3D, nearClipDistance, farClipDistance)",
+        "description": "Create an orthographic matrix from a 3D width, a 3D height, a near, and a far clipping distance"
+    },
+    "geom.perspectiveMatrix": {
+        "prefix": "geom.perspectiveMatrix",
+        "body": "geom.perspectiveMatrix(fovX, aspectRatio, nearClipDistance, farClipDistance)",
+        "description": "Create a perspective matrix from a fovX, an aspect ratio, a near, and a far clipping distance"
+    },
+    "geom.toTRS": {
+        "prefix": "geom.toTRS",
+        "body": "geom.toTRS(matrix)",
+        "description": "Decompose a Matrix into translation, rotation and scaling vectors"
+    },
+    "io.configureFunctionLogger": {
+        "prefix": "io.configureFunctionLogger",
+        "body": "io.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "io.exportSceneToReflect": {
+        "prefix": "io.exportSceneToReflect",
+        "body": "io.exportSceneToReflect(root, sourceName, uid, keepHierarchy, configFile, disableDecimation)",
+        "description": "Export current scene to a reflect project"
+    },
+    "io.debug": {
+        "prefix": "io.debug",
+        "body": "io.debug(cloudFile)",
+        "description": "for debugging purpose only"
+    },
+    "io.importDebugTessellation": {
+        "prefix": "io.importDebugTessellation",
+        "body": "io.importDebugTessellation(filename)",
+        "description": "for debugging purpose only"
+    },
+    "io.exportScene": {
+        "prefix": "io.exportScene",
+        "body": "io.exportScene(fileName, root)",
+        "description": "Export a file"
+    },
+    "io.exportSelection": {
+        "prefix": "io.exportSelection",
+        "body": "io.exportSelection(fileName, keepIntermediaryNodes)",
+        "description": "Export the selection to a file"
+    },
+    "io.getExportFormats": {
+        "prefix": "io.getExportFormats",
+        "body": "io.getExportFormats()",
+        "description": "Give all the format name and their extensions that can be exported in Pixyz"
+    },
+    "io.getImportFormats": {
+        "prefix": "io.getImportFormats",
+        "body": "io.getImportFormats()",
+        "description": "Give all the format name and their extensions that can be imported in Pixyz"
+    },
+    "io.importFiles": {
+        "prefix": "io.importFiles",
+        "body": "io.importFiles(fileNames, root)",
+        "description": "Import files"
+    },
+    "io.importPicture": {
+        "prefix": "io.importPicture",
+        "body": "io.importPicture(filename, root)",
+        "description": "Imports a picture and applies is at as a texture on a 3D plane created in the scene."
+    },
+    "io.importScene": {
+        "prefix": "io.importScene",
+        "body": "io.importScene(fileName, root)",
+        "description": "Import a file"
+    },
+    "io.splitPointCloud": {
+        "prefix": "io.splitPointCloud",
+        "body": "io.splitPointCloud(files, outputDirectory, minVoxSize, useKDTree, aabb, density)",
+        "description": ""
+    },
+    "lodui.generateLODChain": {
+        "prefix": "lodui.generateLODChain",
+        "body": "lodui.generateLODChain(occurrences, DecimationStrategy)",
+        "description": "Automatically generate multiple LODs from a selection (which will be set as LOD0). Define the number of LODs to generate and a decimation strategy between \u201cDecimate To Target\u201d and \u201cDecimate To Quality\u201d"
+    },
+    "material.addUniformProperty": {
+        "prefix": "material.addUniformProperty",
+        "body": "material.addUniformProperty(pattern, name, type)",
+        "description": "Add a shader uniform parameter to the given custom pattern"
+    },
+    "material.clearAllMaterials": {
+        "prefix": "material.clearAllMaterials",
+        "body": "material.clearAllMaterials()",
+        "description": "Remove and delete all the materials"
+    },
+    "material.configureFunctionLogger": {
+        "prefix": "material.configureFunctionLogger",
+        "body": "material.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "material.convertHeightMapToNormalMap": {
+        "prefix": "material.convertHeightMapToNormalMap",
+        "body": "material.convertHeightMapToNormalMap(hmap, height)",
+        "description": "Convert a height map to a normal map"
+    },
+    "material.convertNormalMapToHeightMap": {
+        "prefix": "material.convertNormalMapToHeightMap",
+        "body": "material.convertNormalMapToHeightMap(nmap, height)",
+        "description": "Convert a normal map to a height map"
+    },
+    "material.createCustomMaterialPattern": {
+        "prefix": "material.createCustomMaterialPattern",
+        "body": "material.createCustomMaterialPattern(name)",
+        "description": "Create a new custom material pattern"
+    },
+    "material.createImageFromDefinition": {
+        "prefix": "material.createImageFromDefinition",
+        "body": "material.createImageFromDefinition(imageDefinition)",
+        "description": "Import an image from its raw data"
+    },
+    "material.createImagesFromDefinitions": {
+        "prefix": "material.createImagesFromDefinitions",
+        "body": "material.createImagesFromDefinitions(imageDefinitions)",
+        "description": "Import images from their raw data"
+    },
+    "material.createMaterial": {
+        "prefix": "material.createMaterial",
+        "body": "material.createMaterial(name, pattern)",
+        "description": "Create a new material from pattern"
+    },
+    "material.createMaterialFromDefinition": {
+        "prefix": "material.createMaterialFromDefinition",
+        "body": "material.createMaterialFromDefinition(materialDefinition)",
+        "description": "Create PBR material from a material definition"
+    },
+    "material.createMaterialsFromDefinitions": {
+        "prefix": "material.createMaterialsFromDefinitions",
+        "body": "material.createMaterialsFromDefinitions(materialDefinitions)",
+        "description": "Create PBR materials from material definitions"
+    },
+    "material.createMaterialsFromMaps": {
+        "prefix": "material.createMaterialsFromMaps",
+        "body": "material.createMaterialsFromMaps(directory)",
+        "description": "Automatically creates PBR materials when importing PBR texture maps from a folder"
+    },
+    "material.exportImage": {
+        "prefix": "material.exportImage",
+        "body": "material.exportImage(image, filename)",
+        "description": "Export an image"
+    },
+    "material.findCustomMaterialPatternByName": {
+        "prefix": "material.findCustomMaterialPatternByName",
+        "body": "material.findCustomMaterialPatternByName(name)",
+        "description": "Returns the material pattern which has the given name"
+    },
+    "material.findMaterialsByPattern": {
+        "prefix": "material.findMaterialsByPattern",
+        "body": "material.findMaterialsByPattern(pattern)",
+        "description": "Returns all materials using the given pattern"
+    },
+    "material.findMaterialsByProperty": {
+        "prefix": "material.findMaterialsByProperty",
+        "body": "material.findMaterialsByProperty(propertyName, propertyValue)",
+        "description": "Returns all materials which match a given property value"
+    },
+    "material.getAllImages": {
+        "prefix": "material.getAllImages",
+        "body": "material.getAllImages(materials)",
+        "description": "Returns all the images loaded in the current session or from a list of materials"
+    },
+    "material.getAllMaterialPatterns": {
+        "prefix": "material.getAllMaterialPatterns",
+        "body": "material.getAllMaterialPatterns()",
+        "description": "Returns all the material patterns in the current session"
+    },
+    "material.getAllMaterials": {
+        "prefix": "material.getAllMaterials",
+        "body": "material.getAllMaterials()",
+        "description": "Retrieve the list of all the materials in the material library"
+    },
+    "material.getColorMaterialInfos": {
+        "prefix": "material.getColorMaterialInfos",
+        "body": "material.getColorMaterialInfos(material)",
+        "description": "Get color material properties"
+    },
+    "material.getCustomMaterialPattern": {
+        "prefix": "material.getCustomMaterialPattern",
+        "body": "material.getCustomMaterialPattern(material)",
+        "description": "Returns the custom material pattern associated to the custom material"
+    },
+    "material.getImageDefinition": {
+        "prefix": "material.getImageDefinition",
+        "body": "material.getImageDefinition(image)",
+        "description": "Returns the raw data of an image"
+    },
+    "material.getImageDefinitions": {
+        "prefix": "material.getImageDefinitions",
+        "body": "material.getImageDefinitions(images)",
+        "description": "Returns the raw data of a set of images"
+    },
+    "material.getImageSize": {
+        "prefix": "material.getImageSize",
+        "body": "material.getImageSize(image)",
+        "description": "Returns the size of an image"
+    },
+    "material.getImpostorMaterialInfos": {
+        "prefix": "material.getImpostorMaterialInfos",
+        "body": "material.getImpostorMaterialInfos(material)",
+        "description": "Get impostor texture material properties"
+    },
+    "material.getMaterialDefinition": {
+        "prefix": "material.getMaterialDefinition",
+        "body": "material.getMaterialDefinition(material)",
+        "description": "Returns the properties of a PBR Material"
+    },
+    "material.getMaterialDefinitions": {
+        "prefix": "material.getMaterialDefinitions",
+        "body": "material.getMaterialDefinitions(materials)",
+        "description": "Returns the properties of a set of PBR Materials"
+    },
+    "material.getMaterialPatternType": {
+        "prefix": "material.getMaterialPatternType",
+        "body": "material.getMaterialPatternType(material)",
+        "description": "Returns the MaterialPatternType name of the material"
+    },
+    "material.getPBRMaterialInfos": {
+        "prefix": "material.getPBRMaterialInfos",
+        "body": "material.getPBRMaterialInfos(material)",
+        "description": "Get PBR  material properties"
+    },
+    "material.getStandardMaterialInfos": {
+        "prefix": "material.getStandardMaterialInfos",
+        "body": "material.getStandardMaterialInfos(material)",
+        "description": "Get standard material properties"
+    },
+    "material.getUniformPropertyType": {
+        "prefix": "material.getUniformPropertyType",
+        "body": "material.getUniformPropertyType(pattern, name)",
+        "description": "Get a shader uniform shader property type"
+    },
+    "material.getUnlitTextureMaterialInfos": {
+        "prefix": "material.getUnlitTextureMaterialInfos",
+        "body": "material.getUnlitTextureMaterialInfos(material)",
+        "description": "Get unlit texture material properties"
+    },
+    "material.importImage": {
+        "prefix": "material.importImage",
+        "body": "material.importImage(filename)",
+        "description": "Import an image"
+    },
+    "material.makeMaterialNamesUnique": {
+        "prefix": "material.makeMaterialNamesUnique",
+        "body": "material.makeMaterialNamesUnique(materials)",
+        "description": "Rename materials to have a unique name for each one"
+    },
+    "material.resizeImage": {
+        "prefix": "material.resizeImage",
+        "body": "material.resizeImage(image, width, height)",
+        "description": "Resize an image"
+    },
+    "material.setFragmentShader": {
+        "prefix": "material.setFragmentShader",
+        "body": "material.setFragmentShader(pattern, code)",
+        "description": "Set the fragment shader of a custom pattern"
+    },
+    "material.setMaterialMainColor": {
+        "prefix": "material.setMaterialMainColor",
+        "body": "material.setMaterialMainColor(material, color)",
+        "description": "Set the main color on any material pattern type"
+    },
+    "material.setMaterialPattern": {
+        "prefix": "material.setMaterialPattern",
+        "body": "material.setMaterialPattern(material, pattern)",
+        "description": "Sets the MaterialPattern name of the material"
+    },
+    "material.setPBRMaterialInfos": {
+        "prefix": "material.setPBRMaterialInfos",
+        "body": "material.setPBRMaterialInfos(material, infos)",
+        "description": "Set PBR  material properties"
+    },
+    "material.setVertexShader": {
+        "prefix": "material.setVertexShader",
+        "body": "material.setVertexShader(pattern, code)",
+        "description": "Set the vertex shader of a custom pattern"
+    },
+    "material.updateImageFromDefinition": {
+        "prefix": "material.updateImageFromDefinition",
+        "body": "material.updateImageFromDefinition(image, imageDefinition)",
+        "description": "Update an image from its raw data"
+    },
+    "material.updateImagesFromDefinitions": {
+        "prefix": "material.updateImagesFromDefinitions",
+        "body": "material.updateImagesFromDefinitions(image, imageDefinitions)",
+        "description": "Update images from their raw data"
+    },
+    "polygonal.configureFunctionLogger": {
+        "prefix": "polygonal.configureFunctionLogger",
+        "body": "polygonal.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "polygonal.computeMeshTopoChecksum": {
+        "prefix": "polygonal.computeMeshTopoChecksum",
+        "body": "polygonal.computeMeshTopoChecksum(mesh)",
+        "description": "Compute a checksum of the mesh topology, connectivity"
+    },
+    "polygonal.computeMeshVertexPositionsChecksum": {
+        "prefix": "polygonal.computeMeshVertexPositionsChecksum",
+        "body": "polygonal.computeMeshVertexPositionsChecksum(mesh, precisionFloat)",
+        "description": "Compute a checksum of the mesh vertices positions"
+    },
+    "polygonal.computeUVTopoChecksum": {
+        "prefix": "polygonal.computeUVTopoChecksum",
+        "body": "polygonal.computeUVTopoChecksum(mesh, uvChannel)",
+        "description": "Compute a checksum of the uvs topology, connectivity"
+    },
+    "polygonal.computeUVVertexPositionsChecksum": {
+        "prefix": "polygonal.computeUVVertexPositionsChecksum",
+        "body": "polygonal.computeUVVertexPositionsChecksum(mesh, uvChannel, precisionFloat)",
+        "description": "Compute a checksum of the vertices positions in uv space"
+    },
+    "polygonal.dracoDecode": {
+        "prefix": "polygonal.dracoDecode",
+        "body": "polygonal.dracoDecode(buffer, jointIndicesId, jointWeightsId)",
+        "description": "decode a mesh using draco"
+    },
+    "polygonal.dracoEncode": {
+        "prefix": "polygonal.dracoEncode",
+        "body": "polygonal.dracoEncode(mesh, compressionLevel, quantizationPosition, quantizationNormal, quantizationTexCoord)",
+        "description": "encode a mesh using draco"
+    },
+    "polygonal.getNormal": {
+        "prefix": "polygonal.getNormal",
+        "body": "polygonal.getNormal(Polygon, Vertex)",
+        "description": "Return the normal attribute of a polygon at a specified vertex"
+    },
+    "polygonal.getTextureCoordinates": {
+        "prefix": "polygonal.getTextureCoordinates",
+        "body": "polygonal.getTextureCoordinates(tessellation)",
+        "description": "Return the texture coordinates attribute of all the polygons from the tessellation"
+    },
+    "polygonal.getVisiblePolygons": {
+        "prefix": "polygonal.getVisiblePolygons",
+        "body": "polygonal.getVisiblePolygons(tessellation)",
+        "description": "return the visible polygons from the Visibility attributes (see algo.createVisibilityAttributes)"
+    },
+    "polygonal.createJointPlaceholders": {
+        "prefix": "polygonal.createJointPlaceholders",
+        "body": "polygonal.createJointPlaceholders(data, worldMatrices)",
+        "description": "Create fake joint to store in mesh definitions. Thus we can retrieve stored data from getJointPlaceholders"
+    },
+    "polygonal.createMeshFromDefinition": {
+        "prefix": "polygonal.createMeshFromDefinition",
+        "body": "polygonal.createMeshFromDefinition(meshDefinition)",
+        "description": "Create a new mesh with the given MeshDefinition"
+    },
+    "polygonal.createMeshesFromDefinitions": {
+        "prefix": "polygonal.createMeshesFromDefinitions",
+        "body": "polygonal.createMeshesFromDefinitions(meshDefinitions)",
+        "description": "Create new meshes with the given MeshDefinitions"
+    },
+    "polygonal.getEdgePolygons": {
+        "prefix": "polygonal.getEdgePolygons",
+        "body": "polygonal.getEdgePolygons(edge)",
+        "description": "Returns the polygons connected to an edge"
+    },
+    "polygonal.getEdgeVertices": {
+        "prefix": "polygonal.getEdgeVertices",
+        "body": "polygonal.getEdgeVertices(edge)",
+        "description": "Returns the vertices of an edge"
+    },
+    "polygonal.getEdges": {
+        "prefix": "polygonal.getEdges",
+        "body": "polygonal.getEdges(tessellation, category)",
+        "description": "Returns the edges corresponding to the given connectivity"
+    },
+    "polygonal.getFreeEdges": {
+        "prefix": "polygonal.getFreeEdges",
+        "body": "polygonal.getFreeEdges(tessellation)",
+        "description": "Returns the free edges of a tessellation"
+    },
+    "polygonal.getFreeVertices": {
+        "prefix": "polygonal.getFreeVertices",
+        "body": "polygonal.getFreeVertices(tessellation)",
+        "description": "Returns the free vertices of a tessellation"
+    },
+    "polygonal.getJointPlaceholders": {
+        "prefix": "polygonal.getJointPlaceholders",
+        "body": "polygonal.getJointPlaceholders(joints)",
+        "description": "Get data stored in joint placeholders"
+    },
+    "polygonal.getMeshDefinition": {
+        "prefix": "polygonal.getMeshDefinition",
+        "body": "polygonal.getMeshDefinition(mesh)",
+        "description": "Returns the definition"
+    },
+    "polygonal.getMeshDefinitions": {
+        "prefix": "polygonal.getMeshDefinitions",
+        "body": "polygonal.getMeshDefinitions(meshes)",
+        "description": "Returns the definition"
+    },
+    "polygonal.getMeshSkinning": {
+        "prefix": "polygonal.getMeshSkinning",
+        "body": "polygonal.getMeshSkinning(mesh)",
+        "description": "Returns the joints/IBMs list of a given mesh (those referenced by jointIndices)"
+    },
+    "polygonal.getPatches": {
+        "prefix": "polygonal.getPatches",
+        "body": "polygonal.getPatches(tessellation)",
+        "description": "Returns the patches of a tessellation"
+    },
+    "polygonal.getPolygonEdges": {
+        "prefix": "polygonal.getPolygonEdges",
+        "body": "polygonal.getPolygonEdges(polygon)",
+        "description": "Returns the edges of a a polygon"
+    },
+    "polygonal.getPolygonVertices": {
+        "prefix": "polygonal.getPolygonVertices",
+        "body": "polygonal.getPolygonVertices(polygon)",
+        "description": "Returns the vertices of a a polygon"
+    },
+    "polygonal.getPolygons": {
+        "prefix": "polygonal.getPolygons",
+        "body": "polygonal.getPolygons(tessellation)",
+        "description": "Returns the polygons of a tessellation"
+    },
+    "polygonal.getTessellationBoundaries": {
+        "prefix": "polygonal.getTessellationBoundaries",
+        "body": "polygonal.getTessellationBoundaries(tessellation)",
+        "description": "Get boundary edges of a tessellation grouped by cycles"
+    },
+    "polygonal.getVertexCoordinates": {
+        "prefix": "polygonal.getVertexCoordinates",
+        "body": "polygonal.getVertexCoordinates(vertex)",
+        "description": "Returns the vertex coordinates in the tessellation local space"
+    },
+    "polygonal.getVertexEdges": {
+        "prefix": "polygonal.getVertexEdges",
+        "body": "polygonal.getVertexEdges(vertex)",
+        "description": "Returns the edges connected to a vertex"
+    },
+    "polygonal.getVertexPolygons": {
+        "prefix": "polygonal.getVertexPolygons",
+        "body": "polygonal.getVertexPolygons(vertex)",
+        "description": "Returns the polygons connected to a vertex"
+    },
+    "polygonal.getVertices": {
+        "prefix": "polygonal.getVertices",
+        "body": "polygonal.getVertices(tessellation, category)",
+        "description": "Returns the vertices of a tessellation"
+    },
+    "polygonal.setMeshSkinning": {
+        "prefix": "polygonal.setMeshSkinning",
+        "body": "polygonal.setMeshSkinning(mesh, joints, IBMs)",
+        "description": "Set/Replace the list of joints/IBMs of a given mesh (those referenced by jointIndices)"
+    },
+    "polygonal.destroyElements": {
+        "prefix": "polygonal.destroyElements",
+        "body": "polygonal.destroyElements(elements)",
+        "description": "Destroy all the given elements"
+    },
+    "polygonal.invertElements": {
+        "prefix": "polygonal.invertElements",
+        "body": "polygonal.invertElements(elements)",
+        "description": "Invert the orientation of all the given elements"
+    },
+    "process.configureFunctionLogger": {
+        "prefix": "process.configureFunctionLogger",
+        "body": "process.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "process.decimateTargetBake": {
+        "prefix": "process.decimateTargetBake",
+        "body": "process.decimateTargetBake(occurrences, decimationTargetType, bakingOptions, overrideExistingUV)",
+        "description": "Automatically decimates a selection of meshes, using as a target a triangle count or a ratio (reduction percentage), and bakes Normals information into a texture (plus other textures)."
+    },
+    "process.generateLODChain": {
+        "prefix": "process.generateLODChain",
+        "body": "process.generateLODChain(occurrences, decimateParametersList)",
+        "description": "Automatically generates LODs for the current selection."
+    },
+    "process.generateLODChainTarget": {
+        "prefix": "process.generateLODChainTarget",
+        "body": "process.generateLODChainTarget(occurrences, UVImportance, ProtectTopology, LODLevels)",
+        "description": "Automatically generates LODs for the current selection, using the decimate to target algorithm."
+    },
+    "process.generatePhantomMesh": {
+        "prefix": "process.generatePhantomMesh",
+        "body": "process.generatePhantomMesh(occurrences, generateDiffuseMap)",
+        "description": "Automatically generates one unique optimized mesh out of the models in the scene, with material(s)."
+    },
+    "process.guidedImport": {
+        "prefix": "process.guidedImport",
+        "body": "process.guidedImport(fileNames, coordinateSystem, tessellation, otherOptions, importLines, importPoints, importHidden, importPMI, importVariants, useAlternativeImporter)",
+        "description": "The Guided import automatically converts and readies your 3D model(s) with guided parameters."
+    },
+    "process.proxyFromMeshes": {
+        "prefix": "process.proxyFromMeshes",
+        "body": "process.proxyFromMeshes(occurrences, gridResolution, generateTextures, transferAnimations, keepOriginalMesh)",
+        "description": "Automatically generates a Proxy Mesh out of a selection of meshes, with optional automatic textures generation."
+    },
+    "process.proxyFromPointCloud": {
+        "prefix": "process.proxyFromPointCloud",
+        "body": "process.proxyFromPointCloud(occurrences, gridResolution, generateDiffuseTexture, keepOriginalPointCloud)",
+        "description": "Automatically generates a Proxy Mesh out of a selection of Point Cloud, with optional automatic diffuse texture generation."
+    },
+    "process.runGenericProcess": {
+        "prefix": "process.runGenericProcess",
+        "body": "process.runGenericProcess(overrideExistingUVs, repackUVs)",
+        "description": "Automatically creates optimized meshes out of any 3D model (mesh or CAD)."
+    },
+    "scene.addComponent": {
+        "prefix": "scene.addComponent",
+        "body": "scene.addComponent(occurrence, componentType)",
+        "description": "Add a component to an occurrence"
+    },
+    "scene.addComponents": {
+        "prefix": "scene.addComponents",
+        "body": "scene.addComponents(occurrences, componentType)",
+        "description": "Add a components to each occurrence in the array"
+    },
+    "scene.addLOD": {
+        "prefix": "scene.addLOD",
+        "body": "scene.addLOD(component, occurrence, distance)",
+        "description": "Add a LOD to a LODComponent"
+    },
+    "scene.addLightComponent": {
+        "prefix": "scene.addLightComponent",
+        "body": "scene.addLightComponent(occurrence)",
+        "description": "Add a light component to an occurrence"
+    },
+    "scene.addMetadata": {
+        "prefix": "scene.addMetadata",
+        "body": "scene.addMetadata(metadata, name, value)",
+        "description": "Add a new metadata property to a metadata component"
+    },
+    "scene.addMetadataBlock": {
+        "prefix": "scene.addMetadataBlock",
+        "body": "scene.addMetadataBlock(metadata, names, values)",
+        "description": "Add a new metadata property to a metadata component"
+    },
+    "scene.cleanUnusedImages": {
+        "prefix": "scene.cleanUnusedImages",
+        "body": "scene.cleanUnusedImages()",
+        "description": "Remove unused images from texture library"
+    },
+    "scene.cleanUnusedMaterials": {
+        "prefix": "scene.cleanUnusedMaterials",
+        "body": "scene.cleanUnusedMaterials(cleanImages)",
+        "description": "Remove unused materials from material library"
+    },
+    "scene.computeSubTreeChecksum": {
+        "prefix": "scene.computeSubTreeChecksum",
+        "body": "scene.computeSubTreeChecksum(root)",
+        "description": "Compute the checksum of a sub-tree"
+    },
+    "scene.configureFunctionLogger": {
+        "prefix": "scene.configureFunctionLogger",
+        "body": "scene.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "scene.configureOoC": {
+        "prefix": "scene.configureOoC",
+        "body": "scene.configureOoC(ooc, implementationType, implementationParameters)",
+        "description": "Set and configure an Out of Core component implementation"
+    },
+    "scene.convertMaterialsToColor": {
+        "prefix": "scene.convertMaterialsToColor",
+        "body": "scene.convertMaterialsToColor(materials)",
+        "description": "Convert all materials to materials with a color pattern, trying to keep the visual aspect as similar as possible"
+    },
+    "scene.convertMaterialsToPBR": {
+        "prefix": "scene.convertMaterialsToPBR",
+        "body": "scene.convertMaterialsToPBR(materials)",
+        "description": "Convert all materials to materials with a PBR pattern, trying to keep the visual aspect as similar as possible"
+    },
+    "scene.createCone": {
+        "prefix": "scene.createCone",
+        "body": "scene.createCone(bottomRadius, height, sides, generateUV)",
+        "description": "Create a new cone"
+    },
+    "scene.createCube": {
+        "prefix": "scene.createCube",
+        "body": "scene.createCube(sizeX, sizeY, sizeZ, subdivision, generateUV)",
+        "description": "Create a new cube"
+    },
+    "scene.createCylinder": {
+        "prefix": "scene.createCylinder",
+        "body": "scene.createCylinder(radius, height, sides, generateUV)",
+        "description": "Create a new cylinder"
+    },
+    "scene.createDirectionalLight": {
+        "prefix": "scene.createDirectionalLight",
+        "body": "scene.createDirectionalLight(color, power, direction)",
+        "description": "Create a new directional light"
+    },
+    "scene.createHierarchicalClusters": {
+        "prefix": "scene.createHierarchicalClusters",
+        "body": "scene.createHierarchicalClusters(root, maxDepth, minFitting)",
+        "description": "Reorganize a sub tree with hierarchical clustering"
+    },
+    "scene.createImmersion": {
+        "prefix": "scene.createImmersion",
+        "body": "scene.createImmersion(radius, subdivisionX, subdivisionY)",
+        "description": "Create a new bagel klein"
+    },
+    "scene.createMetadatasFromDefinitions": {
+        "prefix": "scene.createMetadatasFromDefinitions",
+        "body": "scene.createMetadatasFromDefinitions(occurrences, definitions)",
+        "description": "Create Metadata components from definitions"
+    },
+    "scene.createOBBMesh": {
+        "prefix": "scene.createOBBMesh",
+        "body": "scene.createOBBMesh(occurrence)",
+        "description": ""
+    },
+    "scene.createOccurrence": {
+        "prefix": "scene.createOccurrence",
+        "body": "scene.createOccurrence(name, parent)",
+        "description": "Create a new occurrence"
+    },
+    "scene.createOccurrenceFromSelection": {
+        "prefix": "scene.createOccurrenceFromSelection",
+        "body": "scene.createOccurrenceFromSelection(name, children, parent, keepMaterialAssignment)",
+        "description": "Create a new occurrence and add the given occurrences as children"
+    },
+    "scene.createOccurrenceFromText": {
+        "prefix": "scene.createOccurrenceFromText",
+        "body": "scene.createOccurrenceFromText(text, font, fontSize, color, heigth3D)",
+        "description": "Creates an occurrence from string"
+    },
+    "scene.createOccurrences": {
+        "prefix": "scene.createOccurrences",
+        "body": "scene.createOccurrences(name, parents)",
+        "description": "Create one new occurrence under each given parent"
+    },
+    "scene.createPartsFromMeshes": {
+        "prefix": "scene.createPartsFromMeshes",
+        "body": "scene.createPartsFromMeshes(occurrences, meshes)",
+        "description": "Create a set of Parts given meshes and occurrences"
+    },
+    "scene.createPlane": {
+        "prefix": "scene.createPlane",
+        "body": "scene.createPlane(sizeY, sizeX, subdivisionX, subdivisionY, generateUV)",
+        "description": "Create a  new plane"
+    },
+    "scene.createPositionalLight": {
+        "prefix": "scene.createPositionalLight",
+        "body": "scene.createPositionalLight(color, power, position)",
+        "description": "Create a new positional light"
+    },
+    "scene.createSceneFromMeshes": {
+        "prefix": "scene.createSceneFromMeshes",
+        "body": "scene.createSceneFromMeshes(meshes, matrices, centerPartPivots)",
+        "description": "Create a scene tree with a list of meshes, all meshes becomes part occurrences with the same root. The same mesh Id can be used several times to handle create instances (prototypes)"
+    },
+    "scene.createSphere": {
+        "prefix": "scene.createSphere",
+        "body": "scene.createSphere(radius, subdivisionLatitude, subdivisionLongitude, generateUV)",
+        "description": "Create a new sphere"
+    },
+    "scene.createSpotLight": {
+        "prefix": "scene.createSpotLight",
+        "body": "scene.createSpotLight(color, power, position, direction, cutoff)",
+        "description": "Create a new spot light"
+    },
+    "scene.createSubTree": {
+        "prefix": "scene.createSubTree",
+        "body": "scene.createSubTree(tree, root, replaceRoot)",
+        "description": "Create a complete scene tree"
+    },
+    "scene.createTorus": {
+        "prefix": "scene.createTorus",
+        "body": "scene.createTorus(majorRadius, minorRadius, subdivisionLatitude, subdivisionLongitude)",
+        "description": "Create a new torus"
+    },
+    "scene.deleteComponentByType": {
+        "prefix": "scene.deleteComponentByType",
+        "body": "scene.deleteComponentByType(componentType, occurrence, followPrototypes)",
+        "description": "Delete component from type"
+    },
+    "scene.deleteComponentsByType": {
+        "prefix": "scene.deleteComponentsByType",
+        "body": "scene.deleteComponentsByType(componentType, rootOccurrence)",
+        "description": "Delete all components on subtree from type"
+    },
+    "scene.deleteEmptyOccurrences": {
+        "prefix": "scene.deleteEmptyOccurrences",
+        "body": "scene.deleteEmptyOccurrences(root)",
+        "description": "Delete all empty assemblies"
+    },
+    "scene.deleteOccurrences": {
+        "prefix": "scene.deleteOccurrences",
+        "body": "scene.deleteOccurrences(occurrences)",
+        "description": "Delete a liste of occurrences"
+    },
+    "scene.dumpOoC": {
+        "prefix": "scene.dumpOoC",
+        "body": "scene.dumpOoC(ooc)",
+        "description": "Ask an Out of Core component to save its sub-scene"
+    },
+    "scene.findByActiveMaterial": {
+        "prefix": "scene.findByActiveMaterial",
+        "body": "scene.findByActiveMaterial(material, roots)",
+        "description": "Find all part occurrence with a given material as active material (i.e. as seen in the rendering)"
+    },
+    "scene.findByMetadata": {
+        "prefix": "scene.findByMetadata",
+        "body": "scene.findByMetadata(property, regex, roots)",
+        "description": "Returns all occurrences which a metadata property value matches the given regular expression (ECMAScript)"
+    },
+    "scene.findByProperty": {
+        "prefix": "scene.findByProperty",
+        "body": "scene.findByProperty(property, regex, roots)",
+        "description": "Returns all occurrences which a property value matches the given regular expression (ECMAScript)"
+    },
+    "scene.findPartOccurrencesInAABB": {
+        "prefix": "scene.findPartOccurrencesInAABB",
+        "body": "scene.findPartOccurrencesInAABB(aabb)",
+        "description": "find part occurrences in the scene in a given axis aligned bounding box"
+    },
+    "scene.generateOctaViews": {
+        "prefix": "scene.generateOctaViews",
+        "body": "scene.generateOctaViews(radius, XFrames, YFrames, hemi)",
+        "description": ""
+    },
+    "scene.getAABB": {
+        "prefix": "scene.getAABB",
+        "body": "scene.getAABB(occurrences)",
+        "description": "Returns the axis aligned bounding box of a list of scene paths"
+    },
+    "scene.getActiveMaterial": {
+        "prefix": "scene.getActiveMaterial",
+        "body": "scene.getActiveMaterial(occurrence)",
+        "description": "Get the active material on occurrence"
+    },
+    "scene.getActivePropertyValue": {
+        "prefix": "scene.getActivePropertyValue",
+        "body": "scene.getActivePropertyValue(occurrence, propertyName, cacheProperty)",
+        "description": "Get the value of a property on the first parent that own it"
+    },
+    "scene.getActivePropertyValues": {
+        "prefix": "scene.getActivePropertyValues",
+        "body": "scene.getActivePropertyValues(occurrences, propertyName, cacheProperty)",
+        "description": "Get the value of a property on the first parent that own it for each given occurrence"
+    },
+    "scene.getAnnotationGroups": {
+        "prefix": "scene.getAnnotationGroups",
+        "body": "scene.getAnnotationGroups(pmiComponent)",
+        "description": "Returns the list of the AnnotationGroup from a PMIComponent"
+    },
+    "scene.getAnnotations": {
+        "prefix": "scene.getAnnotations",
+        "body": "scene.getAnnotations(group)",
+        "description": "Returns the list of the Annotation from a AnnotationGroup"
+    },
+    "scene.getChildren": {
+        "prefix": "scene.getChildren",
+        "body": "scene.getChildren(occurrence)",
+        "description": "Get the children of an occurrence"
+    },
+    "scene.getComponent": {
+        "prefix": "scene.getComponent",
+        "body": "scene.getComponent(occurrence, componentType, followPrototypes)",
+        "description": "Returns a component on an occurrence"
+    },
+    "scene.getComponentByOccurrence": {
+        "prefix": "scene.getComponentByOccurrence",
+        "body": "scene.getComponentByOccurrence(occurrences, componentType, followPrototypes)",
+        "description": "Returns one component of the specified type by occurrence if it exists"
+    },
+    "scene.getComponentOccurrence": {
+        "prefix": "scene.getComponentOccurrence",
+        "body": "scene.getComponentOccurrence(component)",
+        "description": "Get the occurrence that own a component"
+    },
+    "scene.getComponentType": {
+        "prefix": "scene.getComponentType",
+        "body": "scene.getComponentType(component)",
+        "description": "Get the type of a component"
+    },
+    "scene.getGlobalMatrix": {
+        "prefix": "scene.getGlobalMatrix",
+        "body": "scene.getGlobalMatrix(occurrence)",
+        "description": "Returns the global matrix on an occurrence"
+    },
+    "scene.getGlobalVisibility": {
+        "prefix": "scene.getGlobalVisibility",
+        "body": "scene.getGlobalVisibility(occurrence)",
+        "description": "Returns the global visibility of a given occurrence"
+    },
+    "scene.getLODComponentOfLOD": {
+        "prefix": "scene.getLODComponentOfLOD",
+        "body": "scene.getLODComponentOfLOD(lod)",
+        "description": "Retrieve the LOD component that use a given LOD"
+    },
+    "scene.getLODComponents": {
+        "prefix": "scene.getLODComponents",
+        "body": "scene.getLODComponents()",
+        "description": "Get all LODComponent of the scene"
+    },
+    "scene.getLODs": {
+        "prefix": "scene.getLODs",
+        "body": "scene.getLODs(component)",
+        "description": "Get all LODs of a LODComponent"
+    },
+    "scene.getLocalMatrix": {
+        "prefix": "scene.getLocalMatrix",
+        "body": "scene.getLocalMatrix(occurrence)",
+        "description": "Returns the local matrix on an occurrence"
+    },
+    "scene.getMBB": {
+        "prefix": "scene.getMBB",
+        "body": "scene.getMBB(occurrences)",
+        "description": "Returns the Minimum Bounding Box of a list of scene paths"
+    },
+    "scene.getMaterialsFromSubtree": {
+        "prefix": "scene.getMaterialsFromSubtree",
+        "body": "scene.getMaterialsFromSubtree(occurrence)",
+        "description": ""
+    },
+    "scene.getMetadata": {
+        "prefix": "scene.getMetadata",
+        "body": "scene.getMetadata(metadata, name)",
+        "description": "Get a metadata property value from a metadata component"
+    },
+    "scene.getMetadatasDefinitions": {
+        "prefix": "scene.getMetadatasDefinitions",
+        "body": "scene.getMetadatasDefinitions(metadatas)",
+        "description": "Returns definition of Metadata components"
+    },
+    "scene.getNodeName": {
+        "prefix": "scene.getNodeName",
+        "body": "scene.getNodeName(occurrence)",
+        "description": "Returns the name of an occurrence"
+    },
+    "scene.getOBB": {
+        "prefix": "scene.getOBB",
+        "body": "scene.getOBB(occurrences)",
+        "description": "Returns the Oriented Bounding Box of a list of scene paths (works only on meshes, fast method, not the Minimum Volume Box)"
+    },
+    "scene.getOccurrenceActiveMaterial": {
+        "prefix": "scene.getOccurrenceActiveMaterial",
+        "body": "scene.getOccurrenceActiveMaterial(occurrence)",
+        "description": "Returns the active material on a given occurrence"
+    },
+    "scene.getOccurrenceAncestors": {
+        "prefix": "scene.getOccurrenceAncestors",
+        "body": "scene.getOccurrenceAncestors(occurrence)",
+        "description": ""
+    },
+    "scene.getOccurrenceLOD": {
+        "prefix": "scene.getOccurrenceLOD",
+        "body": "scene.getOccurrenceLOD(occurrence)",
+        "description": "Retrieve the LOD that references a given occurrence (if any)"
+    },
+    "scene.getOccurrencesAncestors": {
+        "prefix": "scene.getOccurrencesAncestors",
+        "body": "scene.getOccurrencesAncestors(occurrences)",
+        "description": ""
+    },
+    "scene.getOoCConfiguration": {
+        "prefix": "scene.getOoCConfiguration",
+        "body": "scene.getOoCConfiguration(ooc)",
+        "description": "Get the current configuration of an Out of Core component"
+    },
+    "scene.getParent": {
+        "prefix": "scene.getParent",
+        "body": "scene.getParent(occurrence)",
+        "description": "Get the parent of an occurrence"
+    },
+    "scene.getPartActiveShape": {
+        "prefix": "scene.getPartActiveShape",
+        "body": "scene.getPartActiveShape(part)",
+        "description": "Returns the active shape of a part"
+    },
+    "scene.getPartOccurrences": {
+        "prefix": "scene.getPartOccurrences",
+        "body": "scene.getPartOccurrences(from)",
+        "description": "Recursively get all the occurrences containing a part component"
+    },
+    "scene.getPolygonCount": {
+        "prefix": "scene.getPolygonCount",
+        "body": "scene.getPolygonCount(occurrences, asTriangleCount, countOnceEachInstance, countHidden)",
+        "description": "Returns the number of polygon in the parts meshes"
+    },
+    "scene.getReferencers": {
+        "prefix": "scene.getReferencers",
+        "body": "scene.getReferencers(prototype)",
+        "description": "Returns all the occurrences prototyping the given occurrence"
+    },
+    "scene.getRoot": {
+        "prefix": "scene.getRoot",
+        "body": "scene.getRoot()",
+        "description": "Get the root occurrence of the product structure"
+    },
+    "scene.getSubTree": {
+        "prefix": "scene.getSubTree",
+        "body": "scene.getSubTree(root, visibilityMode, depth)",
+        "description": "Returns a packed version of the whole scene tree"
+    },
+    "scene.getSubTreeStats": {
+        "prefix": "scene.getSubTreeStats",
+        "body": "scene.getSubTreeStats(root)",
+        "description": "Returns some stats of a sub tree"
+    },
+    "scene.getVertexCount": {
+        "prefix": "scene.getVertexCount",
+        "body": "scene.getVertexCount(occurrences, countOnceEachInstance, countHidden, countPoints, countMergedVertices)",
+        "description": "Returns the number of vertices in the parts meshes"
+    },
+    "scene.getViewpointsFromCavities": {
+        "prefix": "scene.getViewpointsFromCavities",
+        "body": "scene.getViewpointsFromCavities(voxelSize, minCavityVolume)",
+        "description": "Returns viewpoints from model cavities"
+    },
+    "scene.hasComponent": {
+        "prefix": "scene.hasComponent",
+        "body": "scene.hasComponent(occurrence, componentType, followPrototypes)",
+        "description": "Returns True if the given occurrence has the given component type"
+    },
+    "scene.hide": {
+        "prefix": "scene.hide",
+        "body": "scene.hide(occurrence)",
+        "description": "Hide the given occurrence"
+    },
+    "scene.insertDefaultLightsInTree": {
+        "prefix": "scene.insertDefaultLightsInTree",
+        "body": "scene.insertDefaultLightsInTree()",
+        "description": "Create the default light"
+    },
+    "scene.listComponent": {
+        "prefix": "scene.listComponent",
+        "body": "scene.listComponent(componentType)",
+        "description": "List all components on a type on the whole tree"
+    },
+    "scene.listComponents": {
+        "prefix": "scene.listComponents",
+        "body": "scene.listComponents(occurrence, followPrototypes)",
+        "description": "List all components on an occurrence"
+    },
+    "scene.listOoCImplementations": {
+        "prefix": "scene.listOoCImplementations",
+        "body": "scene.listOoCImplementations()",
+        "description": ""
+    },
+    "scene.listPartSubMaterials": {
+        "prefix": "scene.listPartSubMaterials",
+        "body": "scene.listPartSubMaterials(part)",
+        "description": "list all the materials used in the part shape"
+    },
+    "scene.loadOoC": {
+        "prefix": "scene.loadOoC",
+        "body": "scene.loadOoC(ooc)",
+        "description": "Ask an Out of Core component to load its sub-scene"
+    },
+    "scene.mergeImages": {
+        "prefix": "scene.mergeImages",
+        "body": "scene.mergeImages(images)",
+        "description": "Merge all equivalent images (i.e. with same pixels)"
+    },
+    "scene.mergeMaterials": {
+        "prefix": "scene.mergeMaterials",
+        "body": "scene.mergeMaterials(materials, evaluateNames)",
+        "description": "Merge all equivalent materials (i.e. with same appearance)"
+    },
+    "scene.moveOccurrences": {
+        "prefix": "scene.moveOccurrences",
+        "body": "scene.moveOccurrences(occurrences, destination)",
+        "description": "Move an occurrence, adjusting the transformation to keep objects at the same place in the world space"
+    },
+    "scene.removeMaterials": {
+        "prefix": "scene.removeMaterials",
+        "body": "scene.removeMaterials()",
+        "description": "Remove all materials appplied to the selection"
+    },
+    "scene.removeMetadata": {
+        "prefix": "scene.removeMetadata",
+        "body": "scene.removeMetadata(metadata, name)",
+        "description": "Remove a property from a metadata"
+    },
+    "scene.renameLongOccurrenceName": {
+        "prefix": "scene.renameLongOccurrenceName",
+        "body": "scene.renameLongOccurrenceName(maxLength)",
+        "description": "truncate names of occurrence with too long names"
+    },
+    "scene.replaceMaterial": {
+        "prefix": "scene.replaceMaterial",
+        "body": "scene.replaceMaterial(originalMaterial, newMaterial, occurrences)",
+        "description": "Replace a material by another everywhere it is used"
+    },
+    "scene.resizeTextures": {
+        "prefix": "scene.resizeTextures",
+        "body": "scene.resizeTextures(inputMode, resizeMode, replaceTextures)",
+        "description": "Resizes the textures from a selection of occurrences (resizes all textures used by these occurrences), or from a selection of textures"
+    },
+    "scene.selectByMaterial": {
+        "prefix": "scene.selectByMaterial",
+        "body": "scene.selectByMaterial(material)",
+        "description": "Selects occurrences for which the property \"Material\" is the given material"
+    },
+    "scene.selectByVisibleMaterial": {
+        "prefix": "scene.selectByVisibleMaterial",
+        "body": "scene.selectByVisibleMaterial(material)",
+        "description": "Selects parts for which the given material is visible in the viewer"
+    },
+    "scene.selectPartOccurrencesInBox": {
+        "prefix": "scene.selectPartOccurrencesInBox",
+        "body": "scene.selectPartOccurrencesInBox(box, strictlyIncludes)",
+        "description": "find part occurrences in the scene in a given box and add them to the selection"
+    },
+    "scene.setComponentOccurrence": {
+        "prefix": "scene.setComponentOccurrence",
+        "body": "scene.setComponentOccurrence(component, occurrence)",
+        "description": "Move a component to an occurrence"
+    },
+    "scene.setDefaultVariant": {
+        "prefix": "scene.setDefaultVariant",
+        "body": "scene.setDefaultVariant()",
+        "description": "Set the default variant"
+    },
+    "scene.setOccurrenceMaterial": {
+        "prefix": "scene.setOccurrenceMaterial",
+        "body": "scene.setOccurrenceMaterial(occurrence, material)",
+        "description": "Set the material on a occurrence"
+    },
+    "scene.setParent": {
+        "prefix": "scene.setParent",
+        "body": "scene.setParent(occurrence, parent, addInParentInstances, insertBefore)",
+        "description": "Set the parent of an occurrence"
+    },
+    "scene.show": {
+        "prefix": "scene.show",
+        "body": "scene.show(occurrence)",
+        "description": "Show the given occurrence"
+    },
+    "scene.showOnly": {
+        "prefix": "scene.showOnly",
+        "body": "scene.showOnly(occurrence)",
+        "description": "Show only the given occurrence"
+    },
+    "scene.transferCADMaterialsOnPartOccurrences": {
+        "prefix": "scene.transferCADMaterialsOnPartOccurrences",
+        "body": "scene.transferCADMaterialsOnPartOccurrences(rootOccurrence)",
+        "description": "Set all materials on part occurrences"
+    },
+    "scene.transferMaterialsOnPatches": {
+        "prefix": "scene.transferMaterialsOnPatches",
+        "body": "scene.transferMaterialsOnPatches(rootOccurrence)",
+        "description": "Take the first instance material and set it one the mesh patches"
+    },
+    "scene.unloadOoC": {
+        "prefix": "scene.unloadOoC",
+        "body": "scene.unloadOoC(ooc)",
+        "description": "Ask an Out of Core component to unload its sub-scene"
+    },
+    "scene.createAlternativeTree": {
+        "prefix": "scene.createAlternativeTree",
+        "body": "scene.createAlternativeTree(name, root)",
+        "description": "Create a new alternative tree"
+    },
+    "scene.getAlternativeTreeRoot": {
+        "prefix": "scene.getAlternativeTreeRoot",
+        "body": "scene.getAlternativeTreeRoot(tree)",
+        "description": "Returns the root occurrence associated with the given AlternativeTree"
+    },
+    "scene.listAlternativeTrees": {
+        "prefix": "scene.listAlternativeTrees",
+        "body": "scene.listAlternativeTrees()",
+        "description": "Returns all the available alternative trees"
+    },
+    "scene.addKeyframe": {
+        "prefix": "scene.addKeyframe",
+        "body": "scene.addKeyframe(channel, time, value)",
+        "description": "Adds a keyframe in the curve"
+    },
+    "scene.addKeyframeFromCurrentPosition": {
+        "prefix": "scene.addKeyframeFromCurrentPosition",
+        "body": "scene.addKeyframeFromCurrentPosition(channel, time)",
+        "description": "Adds keyframes in a given AnimChannel based on current position"
+    },
+    "scene.animatesThisOccurrence": {
+        "prefix": "scene.animatesThisOccurrence",
+        "body": "scene.animatesThisOccurrence(animation, occurrence)",
+        "description": "Does this Animation animates this Occurrence - or one of its parents (thus animating it indirectly) ?"
+    },
+    "scene.bakeAnimation": {
+        "prefix": "scene.bakeAnimation",
+        "body": "scene.bakeAnimation(animation, occurrence, end, interval)",
+        "description": "Baking soda"
+    },
+    "scene.createAnimation": {
+        "prefix": "scene.createAnimation",
+        "body": "scene.createAnimation(name)",
+        "description": "Creates an animation"
+    },
+    "scene.createSkeletonMesh": {
+        "prefix": "scene.createSkeletonMesh",
+        "body": "scene.createSkeletonMesh(root)",
+        "description": "Create a skeleton mesh from a joint component tree"
+    },
+    "scene.debugAnimation": {
+        "prefix": "scene.debugAnimation",
+        "body": "scene.debugAnimation()",
+        "description": "h4xx_h3re"
+    },
+    "scene.decimateAnimChannelBySegment": {
+        "prefix": "scene.decimateAnimChannelBySegment",
+        "body": "scene.decimateAnimChannelBySegment(channel, precision)",
+        "description": "Decimates by segment a given AnimChannel"
+    },
+    "scene.deleteAnimation": {
+        "prefix": "scene.deleteAnimation",
+        "body": "scene.deleteAnimation(animation)",
+        "description": "Deletes an animation"
+    },
+    "scene.deleteEmptyAnimation": {
+        "prefix": "scene.deleteEmptyAnimation",
+        "body": "scene.deleteEmptyAnimation()",
+        "description": "Delete all animation that contain 0 keyframes"
+    },
+    "scene.displayAllKeyframesFromAnimChannel": {
+        "prefix": "scene.displayAllKeyframesFromAnimChannel",
+        "body": "scene.displayAllKeyframesFromAnimChannel(channel)",
+        "description": "Displays info on the selected AnimChannel"
+    },
+    "scene.displayAllKeyframesFromAnimation": {
+        "prefix": "scene.displayAllKeyframesFromAnimation",
+        "body": "scene.displayAllKeyframesFromAnimation(animation)",
+        "description": "Displays info on the selected animation"
+    },
+    "scene.displayValueFromAnimChannelAtTime": {
+        "prefix": "scene.displayValueFromAnimChannelAtTime",
+        "body": "scene.displayValueFromAnimChannelAtTime(channel, time, defaultValue)",
+        "description": "Displays the value"
+    },
+    "scene.getAnimChannelIfExists": {
+        "prefix": "scene.getAnimChannelIfExists",
+        "body": "scene.getAnimChannelIfExists(animation, occurrence)",
+        "description": "Returns the main AnimChannel of an Occurrence according to a given Animation"
+    },
+    "scene.getAnimChannelOccurrence": {
+        "prefix": "scene.getAnimChannelOccurrence",
+        "body": "scene.getAnimChannelOccurrence(channel)",
+        "description": "Returns the Occurrence related to a given AnimChannel"
+    },
+    "scene.getJointDefinition": {
+        "prefix": "scene.getJointDefinition",
+        "body": "scene.getJointDefinition(joint)",
+        "description": "Get joint definition from id"
+    },
+    "scene.getJointDefinitions": {
+        "prefix": "scene.getJointDefinitions",
+        "body": "scene.getJointDefinitions(joints)",
+        "description": "Get joint definition from id"
+    },
+    "scene.getKeyframeParentAnimChannel": {
+        "prefix": "scene.getKeyframeParentAnimChannel",
+        "body": "scene.getKeyframeParentAnimChannel(keyframe)",
+        "description": "Returns the parent AnimChannel of a given Keyframe"
+    },
+    "scene.getKeyframes": {
+        "prefix": "scene.getKeyframes",
+        "body": "scene.getKeyframes(channel)",
+        "description": "Returns a list of all keyframes of a simple animChannel"
+    },
+    "scene.getMainChannel": {
+        "prefix": "scene.getMainChannel",
+        "body": "scene.getMainChannel(channel)",
+        "description": "Returns the main AnimChannel of a given AnimChannel"
+    },
+    "scene.getOccurrenceJoint": {
+        "prefix": "scene.getOccurrenceJoint",
+        "body": "scene.getOccurrenceJoint(occurrence)",
+        "description": "Returns the Joint assigned to an occurrence if any"
+    },
+    "scene.getParentChannel": {
+        "prefix": "scene.getParentChannel",
+        "body": "scene.getParentChannel(channel)",
+        "description": "Returns (if exists) the parent AnimChannel of a given AnimChannel"
+    },
+    "scene.getSubChannel": {
+        "prefix": "scene.getSubChannel",
+        "body": "scene.getSubChannel(channel, name)",
+        "description": "Returns the subchannel of a given name from an AnimChannel"
+    },
+    "scene.getSubChannels": {
+        "prefix": "scene.getSubChannels",
+        "body": "scene.getSubChannels(channel)",
+        "description": "Returns all the sub channel of an AnimChannel"
+    },
+    "scene.linkPropertyToAnimation": {
+        "prefix": "scene.linkPropertyToAnimation",
+        "body": "scene.linkPropertyToAnimation(animation, entity, propertyName)",
+        "description": "Creates a Binder in an Animation stack to animate an entity's property"
+    },
+    "scene.listAnimations": {
+        "prefix": "scene.listAnimations",
+        "body": "scene.listAnimations()",
+        "description": "List all Animations from the scene"
+    },
+    "scene.listMainChannels": {
+        "prefix": "scene.listMainChannels",
+        "body": "scene.listMainChannels(animation)",
+        "description": "List all main AnimChannel from a given Animation"
+    },
+    "scene.listMainChannelsFromOccurrence": {
+        "prefix": "scene.listMainChannelsFromOccurrence",
+        "body": "scene.listMainChannelsFromOccurrence(occurrence)",
+        "description": "List all main AnimChannel from a given Occurrence"
+    },
+    "scene.makeDefaultKeyframe": {
+        "prefix": "scene.makeDefaultKeyframe",
+        "body": "scene.makeDefaultKeyframe(channel)",
+        "description": "Creates keyframes with the default values of the channel at time 0"
+    },
+    "scene.moveAnimation": {
+        "prefix": "scene.moveAnimation",
+        "body": "scene.moveAnimation(animation, target, newParent, interval)",
+        "description": "Moving animation"
+    },
+    "scene.removeKeyframe": {
+        "prefix": "scene.removeKeyframe",
+        "body": "scene.removeKeyframe(channel, time)",
+        "description": "Removes a keyframe in the curve"
+    },
+    "scene.unlinkPropertyToAnimation": {
+        "prefix": "scene.unlinkPropertyToAnimation",
+        "body": "scene.unlinkPropertyToAnimation(animation, entity, propertyName)",
+        "description": "Unlinks a binder"
+    },
+    "scene.getBRepInfos": {
+        "prefix": "scene.getBRepInfos",
+        "body": "scene.getBRepInfos()",
+        "description": ""
+    },
+    "scene.getTessellationInfos": {
+        "prefix": "scene.getTessellationInfos",
+        "body": "scene.getTessellationInfos()",
+        "description": ""
+    },
+    "scene.print": {
+        "prefix": "scene.print",
+        "body": "scene.print(root)",
+        "description": "Print an occurrence tree on log"
+    },
+    "scene.addFilterToLibrary": {
+        "prefix": "scene.addFilterToLibrary",
+        "body": "scene.addFilterToLibrary(name, expr)",
+        "description": "Add a filter to the filters library"
+    },
+    "scene.evaluateExpression": {
+        "prefix": "scene.evaluateExpression",
+        "body": "scene.evaluateExpression(filter)",
+        "description": "Evaluate the given filter expression"
+    },
+    "scene.evaluateExpressionOnOccurrences": {
+        "prefix": "scene.evaluateExpressionOnOccurrences",
+        "body": "scene.evaluateExpressionOnOccurrences(occurrences, filter)",
+        "description": "evaluate the given filter expression on all occurrences under the given occurrence and returns the result"
+    },
+    "scene.evaluateExpressionOnSubTree": {
+        "prefix": "scene.evaluateExpressionOnSubTree",
+        "body": "scene.evaluateExpressionOnSubTree(filter, from)",
+        "description": "evaluate the given filter expression on all occurrences under the given occurrence and returns the result"
+    },
+    "scene.exportFilterLibrary": {
+        "prefix": "scene.exportFilterLibrary",
+        "body": "scene.exportFilterLibrary(file)",
+        "description": "Export filters from a given file"
+    },
+    "scene.findFilterByName": {
+        "prefix": "scene.findFilterByName",
+        "body": "scene.findFilterByName(name)",
+        "description": "Returns the first filter in the filter library with the given name"
+    },
+    "scene.getFilterExpression": {
+        "prefix": "scene.getFilterExpression",
+        "body": "scene.getFilterExpression(filterId)",
+        "description": "Returns the filter expression (string) from a filter id stored in the library"
+    },
+    "scene.getFilterFromLibrary": {
+        "prefix": "scene.getFilterFromLibrary",
+        "body": "scene.getFilterFromLibrary(filterId)",
+        "description": "Retrieve a filter from the library with its identifier"
+    },
+    "scene.getFilteredOccurrences": {
+        "prefix": "scene.getFilteredOccurrences",
+        "body": "scene.getFilteredOccurrences(filter, from)",
+        "description": "Recursively get all the occurrences validating the given filter expression"
+    },
+    "scene.importFilterLibrary": {
+        "prefix": "scene.importFilterLibrary",
+        "body": "scene.importFilterLibrary(file)",
+        "description": "Import filters from a given file"
+    },
+    "scene.listFilterLibrary": {
+        "prefix": "scene.listFilterLibrary",
+        "body": "scene.listFilterLibrary()",
+        "description": "Returns all the filter stored in the filter library"
+    },
+    "scene.removeFilterFromLibrary": {
+        "prefix": "scene.removeFilterFromLibrary",
+        "body": "scene.removeFilterFromLibrary(filterId)",
+        "description": "Remove a filter from the filters library"
+    },
+    "scene.rewriteFilterExpression": {
+        "prefix": "scene.rewriteFilterExpression",
+        "body": "scene.rewriteFilterExpression(expr)",
+        "description": "Parse the given expression, and regenerate it from the internal representation structure"
+    },
+    "scene.isolate": {
+        "prefix": "scene.isolate",
+        "body": "scene.isolate(occurrences)",
+        "description": "Enter isolate mode by isolating a subset of the scene for process, export, viewer, ..."
+    },
+    "scene.unisolate": {
+        "prefix": "scene.unisolate",
+        "body": "scene.unisolate()",
+        "description": "Exit the isolate mode"
+    },
+    "scene.mergeByRegions": {
+        "prefix": "scene.mergeByRegions",
+        "body": "scene.mergeByRegions(roots, mergeBy, strategy)",
+        "description": "Merge all parts within the same area."
+    },
+    "scene.mergeByTreeLevel": {
+        "prefix": "scene.mergeByTreeLevel",
+        "body": "scene.mergeByTreeLevel(partOccurrences, maxLevel, mergeHiddenPartsMode)",
+        "description": "Merge all parts over maxLevel level"
+    },
+    "scene.mergeFinalLevel": {
+        "prefix": "scene.mergeFinalLevel",
+        "body": "scene.mergeFinalLevel(roots, mergeHiddenPartsMode, CollapseToParent)",
+        "description": "Merge final level (occurrences with only occurrence with part component as children)"
+    },
+    "scene.mergeParts": {
+        "prefix": "scene.mergeParts",
+        "body": "scene.mergeParts(partOccurrences, mergeHiddenPartsMode)",
+        "description": "Merge a set of parts"
+    },
+    "scene.mergePartsByAssemblies": {
+        "prefix": "scene.mergePartsByAssemblies",
+        "body": "scene.mergePartsByAssemblies(roots, mergeHiddenPartsMode)",
+        "description": "Merge all parts under each assembly together"
+    },
+    "scene.mergePartsByMaterials": {
+        "prefix": "scene.mergePartsByMaterials",
+        "body": "scene.mergePartsByMaterials(partOccurrences, mergeNoMaterials, mergeHiddenPartsMode, combineMeshes)",
+        "description": "Merge a set of parts by materials"
+    },
+    "scene.mergePartsByName": {
+        "prefix": "scene.mergePartsByName",
+        "body": "scene.mergePartsByName(root, mergeHiddenPartsMode)",
+        "description": "Merge all parts by occurrences names"
+    },
+    "scene.applyTransformation": {
+        "prefix": "scene.applyTransformation",
+        "body": "scene.applyTransformation(occurrence, matrix)",
+        "description": "apply a transformation to the local matrix of an occurrence"
+    },
+    "scene.createSymmetry": {
+        "prefix": "scene.createSymmetry",
+        "body": "scene.createSymmetry(occurrences, plane)",
+        "description": "Create symmetries from selection"
+    },
+    "scene.rotate": {
+        "prefix": "scene.rotate",
+        "body": "scene.rotate(occurrence, axis, angle)",
+        "description": "Modify the local matrix of the scene node to apply a rotation"
+    },
+    "scene.setLocalMatrix": {
+        "prefix": "scene.setLocalMatrix",
+        "body": "scene.setLocalMatrix(occurrence, matrix)",
+        "description": "change the local matrix on an occurrence"
+    },
+    "scene.getPartMesh": {
+        "prefix": "scene.getPartMesh",
+        "body": "scene.getPartMesh(part)",
+        "description": "Return the mesh of the TesselatedShape"
+    },
+    "scene.getPartModel": {
+        "prefix": "scene.getPartModel",
+        "body": "scene.getPartModel(part)",
+        "description": "Return the model of the BRepShape"
+    },
+    "scene.getPartsMeshes": {
+        "prefix": "scene.getPartsMeshes",
+        "body": "scene.getPartsMeshes(parts)",
+        "description": "Return the meshes of the TesselatedShape for each given parts if any"
+    },
+    "scene.getPartsModels": {
+        "prefix": "scene.getPartsModels",
+        "body": "scene.getPartsModels(parts)",
+        "description": "Return the models of the BRepShape for each given parts if any"
+    },
+    "scene.getPartsTransforms": {
+        "prefix": "scene.getPartsTransforms",
+        "body": "scene.getPartsTransforms(parts)",
+        "description": "Returns the transform matrix of each given parts"
+    },
+    "scene.getPartsTransformsIndexed": {
+        "prefix": "scene.getPartsTransformsIndexed",
+        "body": "scene.getPartsTransformsIndexed(parts)",
+        "description": "Returns the transform matrix of each given parts (indexed mode)"
+    },
+    "scene.setPartMesh": {
+        "prefix": "scene.setPartMesh",
+        "body": "scene.setPartMesh(part, mesh)",
+        "description": "Add a mesh to a part (create a TessellatedShape on the part)"
+    },
+    "scene.setPartModel": {
+        "prefix": "scene.setPartModel",
+        "body": "scene.setPartModel(part, model)",
+        "description": "Add a model to a part (create a BRepShape on the part)"
+    },
+    "scene.setPartsTransforms": {
+        "prefix": "scene.setPartsTransforms",
+        "body": "scene.setPartsTransforms(parts, transforms)",
+        "description": "Set the transform matrix of each given parts"
+    },
+    "scene.setPartsTransformsIndexed": {
+        "prefix": "scene.setPartsTransformsIndexed",
+        "body": "scene.setPartsTransformsIndexed(parts, indices, transforms)",
+        "description": "Set the transform matrix of each given parts (indexed mode)"
+    },
+    "scene.alignPivotPointToWorld": {
+        "prefix": "scene.alignPivotPointToWorld",
+        "body": "scene.alignPivotPointToWorld(occurrences, applyToChildren)",
+        "description": "Re-orient the Pivot Point straight to world origin (the grid)"
+    },
+    "scene.movePivotPointToOccurrenceCenter": {
+        "prefix": "scene.movePivotPointToOccurrenceCenter",
+        "body": "scene.movePivotPointToOccurrenceCenter(occurrences, applyToChildren)",
+        "description": "Move the pivot point of each occurrence listed in the function input, to the center of its bounding box (and of its children if the parameter is True)"
+    },
+    "scene.movePivotPointToOrigin": {
+        "prefix": "scene.movePivotPointToOrigin",
+        "body": "scene.movePivotPointToOrigin(occurrence, applyToChildren)",
+        "description": "Move the pivot point of an occurrence (and its descendants if recursively) to the origin (0,0,0)"
+    },
+    "scene.movePivotPointToSelectionCenter": {
+        "prefix": "scene.movePivotPointToSelectionCenter",
+        "body": "scene.movePivotPointToSelectionCenter(occurrences)",
+        "description": "Move the pivot point of all given occurrences to the center of all occurrences"
+    },
+    "scene.movePivotPointToTargetedOccurrenceCenter": {
+        "prefix": "scene.movePivotPointToTargetedOccurrenceCenter",
+        "body": "scene.movePivotPointToTargetedOccurrenceCenter(occurrences, target, applyToChildren)",
+        "description": "Move the pivot point of each occurrence listed in the function input, to the center of the targeted occurrence Center (and of its children if the parameter is True)"
+    },
+    "scene.setPivotOnly": {
+        "prefix": "scene.setPivotOnly",
+        "body": "scene.setPivotOnly(occurrence, pivot)",
+        "description": "Set the pivot of an occurrence to the given transformation matrix, the geometry will not be moved (warning: do not confuse with property Transform which actually move the occurrence)"
+    },
+    "scene.getPrototype": {
+        "prefix": "scene.getPrototype",
+        "body": "scene.getPrototype(occurrence)",
+        "description": "Returns the prototype of an occurrence"
+    },
+    "scene.prototypeSubTree": {
+        "prefix": "scene.prototypeSubTree",
+        "body": "scene.prototypeSubTree(prototype)",
+        "description": "Create occurrences that prototype the given occurrence and all its subtree"
+    },
+    "scene.setPrototype": {
+        "prefix": "scene.setPrototype",
+        "body": "scene.setPrototype(occurrence, prototype)",
+        "description": "Sets the prototype of an occurrence"
+    },
+    "scene.clearSelection": {
+        "prefix": "scene.clearSelection",
+        "body": "scene.clearSelection()",
+        "description": "Clear the current selection"
+    },
+    "scene.deleteSelection": {
+        "prefix": "scene.deleteSelection",
+        "body": "scene.deleteSelection()",
+        "description": "Delete all selected occurrences, and/or sub-occurrence elements"
+    },
+    "scene.explodeSelection": {
+        "prefix": "scene.explodeSelection",
+        "body": "scene.explodeSelection()",
+        "description": "For each occurrence, create a new occurrence with the selected sub-occurrence elements and remove them from the original occurrence"
+    },
+    "scene.getSelectedOccurrences": {
+        "prefix": "scene.getSelectedOccurrences",
+        "body": "scene.getSelectedOccurrences()",
+        "description": "Returns all the selected occurrences"
+    },
+    "scene.invertOrientationSelection": {
+        "prefix": "scene.invertOrientationSelection",
+        "body": "scene.invertOrientationSelection()",
+        "description": "Invert the orientation of each selected item (occurrences and/or sub-occurrence elements"
+    },
+    "scene.invertSelection": {
+        "prefix": "scene.invertSelection",
+        "body": "scene.invertSelection()",
+        "description": "Replace the selection by all unselected part occurrences"
+    },
+    "scene.select": {
+        "prefix": "scene.select",
+        "body": "scene.select(occurrences)",
+        "description": "Add occurrences to selection"
+    },
+    "scene.selectAllPartOccurrences": {
+        "prefix": "scene.selectAllPartOccurrences",
+        "body": "scene.selectAllPartOccurrences()",
+        "description": "Select all part occurrences"
+    },
+    "scene.separateSelection": {
+        "prefix": "scene.separateSelection",
+        "body": "scene.separateSelection()",
+        "description": "Separate all polygones form their original parts into a new one"
+    },
+    "scene.unselect": {
+        "prefix": "scene.unselect",
+        "body": "scene.unselect(occurrence)",
+        "description": "Remove occurrences to selection"
+    },
+    "scene.compress": {
+        "prefix": "scene.compress",
+        "body": "scene.compress(occurrence)",
+        "description": "Compress a sub-tree by removing occurrence containing only one Child or empty, and by removing useless instances (see removeUselessInstances)"
+    },
+    "scene.convertToOldSchoolVisibility": {
+        "prefix": "scene.convertToOldSchoolVisibility",
+        "body": "scene.convertToOldSchoolVisibility(root)",
+        "description": "Modify the visible properties of the sub-tree to look like old school visibility (only hidden/inherited)"
+    },
+    "scene.getDuplicatedParts": {
+        "prefix": "scene.getDuplicatedParts",
+        "body": "scene.getDuplicatedParts(root, acceptVolumeRatio, acceptPolycountRatio, acceptAABBAxisRatio, acceptAABBCenterDistance)",
+        "description": "Get duplicated parts"
+    },
+    "scene.identifyInstances": {
+        "prefix": "scene.identifyInstances",
+        "body": "scene.identifyInstances(minOccurrenceCount)",
+        "description": "Identify parts with more than one occurrence on the scene"
+    },
+    "scene.makeInstanceUnique": {
+        "prefix": "scene.makeInstanceUnique",
+        "body": "scene.makeInstanceUnique(occurrences)",
+        "description": "Singularize all instances on the sub-tree of an occurrence"
+    },
+    "scene.rake": {
+        "prefix": "scene.rake",
+        "body": "scene.rake(occurrence, keepInstances)",
+        "description": "Set the same parent to all descending parts (all parts will be singularized)"
+    },
+    "scene.removeSymmetryMatrices": {
+        "prefix": "scene.removeSymmetryMatrices",
+        "body": "scene.removeSymmetryMatrices(occurrence)",
+        "description": "Remove symmetry matrices (apply matrices on geometries on nodes under an occurrence with a symmetry matrix"
+    },
+    "scene.removeUselessInstances": {
+        "prefix": "scene.removeUselessInstances",
+        "body": "scene.removeUselessInstances(occurrence)",
+        "description": "Remove instances where they are not needed (prototype referenced once, ...)"
+    },
+    "scene.resetPartTransform": {
+        "prefix": "scene.resetPartTransform",
+        "body": "scene.resetPartTransform(root)",
+        "description": "Set all part transformation matrices to identity in a sub-tree, transformation will be applied to the shapes"
+    },
+    "scene.resetTransform": {
+        "prefix": "scene.resetTransform",
+        "body": "scene.resetTransform(root, recursive, keepInstantiation, keepPartTransform)",
+        "description": "Set all transformation matrices to identity in a sub-tree."
+    },
+    "scene.selectByMaximumSize": {
+        "prefix": "scene.selectByMaximumSize",
+        "body": "scene.selectByMaximumSize(roots, maxDiagLength, maxSize, selectHidden)",
+        "description": "Select all parts meeting the criteria"
+    },
+    "scene.selectDuplicated": {
+        "prefix": "scene.selectDuplicated",
+        "body": "scene.selectDuplicated(acceptVolumeRatio, acceptPolycountRatio, acceptAABBAxisRatio, acceptAABBCenterDistance)",
+        "description": "Select duplicated parts"
+    },
+    "scene.selectInstances": {
+        "prefix": "scene.selectInstances",
+        "body": "scene.selectInstances(occurrence)",
+        "description": "Select occurrences sharing the same prototype as the given one"
+    },
+    "scene.selectPartsFromNoShow": {
+        "prefix": "scene.selectPartsFromNoShow",
+        "body": "scene.selectPartsFromNoShow()",
+        "description": "Select hidden parts"
+    },
+    "scene.selectVisibleParts": {
+        "prefix": "scene.selectVisibleParts",
+        "body": "scene.selectVisibleParts()",
+        "description": "Select visible parts"
+    },
+    "scene.createRayProber": {
+        "prefix": "scene.createRayProber",
+        "body": "scene.createRayProber()",
+        "description": "Creates a ray prober"
+    },
+    "scene.createSphereProber": {
+        "prefix": "scene.createSphereProber",
+        "body": "scene.createSphereProber()",
+        "description": "Creates a sphere prober"
+    },
+    "scene.rayCast": {
+        "prefix": "scene.rayCast",
+        "body": "scene.rayCast(ray, root)",
+        "description": ""
+    },
+    "scene.rayCastAll": {
+        "prefix": "scene.rayCastAll",
+        "body": "scene.rayCastAll(ray, root)",
+        "description": ""
+    },
+    "scene.updateRayProber": {
+        "prefix": "scene.updateRayProber",
+        "body": "scene.updateRayProber(proberID, ray)",
+        "description": "Updates the designed ray prober"
+    },
+    "scene.updateSphereProber": {
+        "prefix": "scene.updateSphereProber",
+        "body": "scene.updateSphereProber(proberID, sphereCenter, sphereRadius)",
+        "description": "Updates the designed sphere prober"
+    },
+    "scene.getMultipleOccurrenceUserData": {
+        "prefix": "scene.getMultipleOccurrenceUserData",
+        "body": "scene.getMultipleOccurrenceUserData(userDataId, occurrences)",
+        "description": "Batch version of getOccurrenceUserData"
+    },
+    "scene.getOccurrenceUserData": {
+        "prefix": "scene.getOccurrenceUserData",
+        "body": "scene.getOccurrenceUserData(userDataId, occurrence)",
+        "description": "Set or replace a userdata stored on an occurrence"
+    },
+    "scene.hasMultipleOccurrenceUserData": {
+        "prefix": "scene.hasMultipleOccurrenceUserData",
+        "body": "scene.hasMultipleOccurrenceUserData(userDataId, occurrences)",
+        "description": "Batch version of hasOccurrenceUserData"
+    },
+    "scene.hasOccurrenceUserData": {
+        "prefix": "scene.hasOccurrenceUserData",
+        "body": "scene.hasOccurrenceUserData(userDataId, occurrence)",
+        "description": "Set or replace a userdata stored on an occurrence"
+    },
+    "scene.setMultipleOccurrenceUserData": {
+        "prefix": "scene.setMultipleOccurrenceUserData",
+        "body": "scene.setMultipleOccurrenceUserData(userDataId, occurrences, userDataList)",
+        "description": "Batch version of setOccurrenceUserData"
+    },
+    "scene.setOccurrenceUserData": {
+        "prefix": "scene.setOccurrenceUserData",
+        "body": "scene.setOccurrenceUserData(userDataId, occurrence, userData)",
+        "description": "Set or replace a userdata stored on an occurrence"
+    },
+    "scene.subscribeToOccurrenceUserData": {
+        "prefix": "scene.subscribeToOccurrenceUserData",
+        "body": "scene.subscribeToOccurrenceUserData()",
+        "description": "subscribe to occurrence user data. multiple different userdata can be stored on the same occurrences if subscribeToOccurrenceUserData is called multiple times"
+    },
+    "scene.unsetMultipleOccurrenceUserData": {
+        "prefix": "scene.unsetMultipleOccurrenceUserData",
+        "body": "scene.unsetMultipleOccurrenceUserData(userDataId, occurrences)",
+        "description": "Batch version of unsetOccurrenceUserData"
+    },
+    "scene.unsetOccurrenceUserData": {
+        "prefix": "scene.unsetOccurrenceUserData",
+        "body": "scene.unsetOccurrenceUserData(userDataId, occurrence)",
+        "description": "Unset the userdata stored on an occurrence"
+    },
+    "scene.unsubscribeFromOccurrenceUserData": {
+        "prefix": "scene.unsubscribeFromOccurrenceUserData",
+        "body": "scene.unsubscribeFromOccurrenceUserData(userDataId)",
+        "description": ""
+    },
+    "scene.addVariant": {
+        "prefix": "scene.addVariant",
+        "body": "scene.addVariant(name)",
+        "description": "Create a new variant"
+    },
+    "scene.duplicateVariant": {
+        "prefix": "scene.duplicateVariant",
+        "body": "scene.duplicateVariant(variant, name)",
+        "description": "Create a new variant which is a copy of an existing variant"
+    },
+    "scene.getVariantComponentsDefinitions": {
+        "prefix": "scene.getVariantComponentsDefinitions",
+        "body": "scene.getVariantComponentsDefinitions(variantComponents)",
+        "description": "Returns the definitions of multiple variant components"
+    },
+    "scene.getVariantTree": {
+        "prefix": "scene.getVariantTree",
+        "body": "scene.getVariantTree(variant)",
+        "description": "Get the alternative tree used by this variant"
+    },
+    "scene.listVariants": {
+        "prefix": "scene.listVariants",
+        "body": "scene.listVariants()",
+        "description": "Returns all the available variants"
+    },
+    "scene.removeVariant": {
+        "prefix": "scene.removeVariant",
+        "body": "scene.removeVariant(variant)",
+        "description": "Remove a variant"
+    },
+    "scene.setCurrentVariant": {
+        "prefix": "scene.setCurrentVariant",
+        "body": "scene.setCurrentVariant(variant)",
+        "description": "Change the current variant used"
+    },
+    "scene.setVariantTree": {
+        "prefix": "scene.setVariantTree",
+        "body": "scene.setVariantTree(variant, tree)",
+        "description": "Set the alternative tree to use for this variant"
+    },
+    "view.configureFunctionLogger": {
+        "prefix": "view.configureFunctionLogger",
+        "body": "view.configureFunctionLogger(functionName, enableFunction, enableParameters, enableExecutionTime)",
+        "description": ""
+    },
+    "view.pauseAnimation": {
+        "prefix": "view.pauseAnimation",
+        "body": "view.pauseAnimation()",
+        "description": "pauses an animation"
+    },
+    "view.playAnimation": {
+        "prefix": "view.playAnimation",
+        "body": "view.playAnimation(animation, speed, times)",
+        "description": "plays an animation"
+    },
+    "view.stopAnimation": {
+        "prefix": "view.stopAnimation",
+        "body": "view.stopAnimation()",
+        "description": "stops an animation"
+    },
+    "view.getViewerDrawPrimitives": {
+        "prefix": "view.getViewerDrawPrimitives",
+        "body": "view.getViewerDrawPrimitives(viewer)",
+        "description": "get draw primitives configuration for the given viewer"
+    },
+    "view.setViewerDrawPrimitives": {
+        "prefix": "view.setViewerDrawPrimitives",
+        "body": "view.setViewerDrawPrimitives(primitivies, viewer)",
+        "description": "set draw primitives configuration for the given viewer"
+    },
+    "view.showBReps": {
+        "prefix": "view.showBReps",
+        "body": "view.showBReps(show, viewer)",
+        "description": ""
+    },
+    "view.showEdges": {
+        "prefix": "view.showEdges",
+        "body": "view.showEdges(show, viewer)",
+        "description": ""
+    },
+    "view.showHidden": {
+        "prefix": "view.showHidden",
+        "body": "view.showHidden(enable, viewer)",
+        "description": "Switch between show hidden and show visible mode"
+    },
+    "view.showLines": {
+        "prefix": "view.showLines",
+        "body": "view.showLines(show, viewer)",
+        "description": ""
+    },
+    "view.showPatchesBorders": {
+        "prefix": "view.showPatchesBorders",
+        "body": "view.showPatchesBorders(show, viewer)",
+        "description": ""
+    },
+    "view.showPoints": {
+        "prefix": "view.showPoints",
+        "body": "view.showPoints(show, viewer)",
+        "description": ""
+    },
+    "view.showPolygons": {
+        "prefix": "view.showPolygons",
+        "body": "view.showPolygons(show, viewer)",
+        "description": ""
+    },
+    "view.showSkeleton": {
+        "prefix": "view.showSkeleton",
+        "body": "view.showSkeleton(show, viewer)",
+        "description": ""
+    },
+    "view.pauseViewer": {
+        "prefix": "view.pauseViewer",
+        "body": "view.pauseViewer(viewer)",
+        "description": "Pause the viewer"
+    },
+    "view.resumeViewer": {
+        "prefix": "view.resumeViewer",
+        "body": "view.resumeViewer(viewer)",
+        "description": "Resume the viewer"
+    },
+    "view.getColorTextureHandle": {
+        "prefix": "view.getColorTextureHandle",
+        "body": "view.getColorTextureHandle(viewer, index)",
+        "description": ""
+    },
+    "view.getDepthTextureHandle": {
+        "prefix": "view.getDepthTextureHandle",
+        "body": "view.getDepthTextureHandle(viewer)",
+        "description": "Get depth texture handle"
+    },
+    "view.getFXAATextureHandle": {
+        "prefix": "view.getFXAATextureHandle",
+        "body": "view.getFXAATextureHandle(viewer)",
+        "description": ""
+    },
+    "view.getFinalTextureHandle": {
+        "prefix": "view.getFinalTextureHandle",
+        "body": "view.getFinalTextureHandle(viewer)",
+        "description": ""
+    },
+    "view.getRenderTargetIndex": {
+        "prefix": "view.getRenderTargetIndex",
+        "body": "view.getRenderTargetIndex(rt, viewer)",
+        "description": ""
+    },
+    "view.addSharedD3D11Texture": {
+        "prefix": "view.addSharedD3D11Texture",
+        "body": "view.addSharedD3D11Texture(interop, pxzTexture, dxTexture)",
+        "description": ""
+    },
+    "view.createD3D11Interop": {
+        "prefix": "view.createD3D11Interop",
+        "body": "view.createD3D11Interop(viewer, device)",
+        "description": ""
+    },
+    "view.deleteD3D11Interop": {
+        "prefix": "view.deleteD3D11Interop",
+        "body": "view.deleteD3D11Interop(interop)",
+        "description": ""
+    },
+    "view.isD3D11InteropLocked": {
+        "prefix": "view.isD3D11InteropLocked",
+        "body": "view.isD3D11InteropLocked(interop)",
+        "description": ""
+    },
+    "view.lockD3D11Interop": {
+        "prefix": "view.lockD3D11Interop",
+        "body": "view.lockD3D11Interop(interop)",
+        "description": ""
+    },
+    "view.removeSharedD3D11Texture": {
+        "prefix": "view.removeSharedD3D11Texture",
+        "body": "view.removeSharedD3D11Texture(interop, pxzTexture)",
+        "description": ""
+    },
+    "view.unlockD3D11Interop": {
+        "prefix": "view.unlockD3D11Interop",
+        "body": "view.unlockD3D11Interop(interop)",
+        "description": ""
+    },
+    "view.addRoot": {
+        "prefix": "view.addRoot",
+        "body": "view.addRoot(root, viewer)",
+        "description": "Add a viewer root"
+    },
+    "view.createViewer": {
+        "prefix": "view.createViewer",
+        "body": "view.createViewer(width, height, handleSelection, forward, glContextHandle)",
+        "description": "Create a new viewer"
+    },
+    "view.destroyViewer": {
+        "prefix": "view.destroyViewer",
+        "body": "view.destroyViewer(viewer)",
+        "description": ""
+    },
+    "view.drawCappingPlane": {
+        "prefix": "view.drawCappingPlane",
+        "body": "view.drawCappingPlane(viewer)",
+        "description": "Create a mesh capping the cutting plane and display it"
+    },
+    "view.fit": {
+        "prefix": "view.fit",
+        "body": "view.fit(occurrences, viewer)",
+        "description": "Fit viewer camera to the given occurrences"
+    },
+    "view.getCuttingPlaneProperty": {
+        "prefix": "view.getCuttingPlaneProperty",
+        "body": "view.getCuttingPlaneProperty(propertyName, viewer)",
+        "description": "Get a cutting plane property value"
+    },
+    "view.getExplodeViewProperty": {
+        "prefix": "view.getExplodeViewProperty",
+        "body": "view.getExplodeViewProperty(propertyName, viewer)",
+        "description": "Get an explode view property value"
+    },
+    "view.getViewerGLContext": {
+        "prefix": "view.getViewerGLContext",
+        "body": "view.getViewerGLContext(viewer)",
+        "description": "Get GL Context handle"
+    },
+    "view.getViewerMatrices": {
+        "prefix": "view.getViewerMatrices",
+        "body": "view.getViewerMatrices(viewer)",
+        "description": ""
+    },
+    "view.getViewerProperty": {
+        "prefix": "view.getViewerProperty",
+        "body": "view.getViewerProperty(propertyName, viewer)",
+        "description": "Get a viewer property value"
+    },
+    "view.getViewerSize": {
+        "prefix": "view.getViewerSize",
+        "body": "view.getViewerSize(viewer)",
+        "description": "Retrieve the viewport size of a viewer"
+    },
+    "view.listCuttingPlaneProperties": {
+        "prefix": "view.listCuttingPlaneProperties",
+        "body": "view.listCuttingPlaneProperties(viewer)",
+        "description": "Get the list of cutting plane properties"
+    },
+    "view.listExplodeViewProperties": {
+        "prefix": "view.listExplodeViewProperties",
+        "body": "view.listExplodeViewProperties(viewer)",
+        "description": "Get the list of explode view properties"
+    },
+    "view.listViewerProperties": {
+        "prefix": "view.listViewerProperties",
+        "body": "view.listViewerProperties(viewer)",
+        "description": "Get the list of viewer properties"
+    },
+    "view.makeCurrent": {
+        "prefix": "view.makeCurrent",
+        "body": "view.makeCurrent(viewer)",
+        "description": ""
+    },
+    "view.pick": {
+        "prefix": "view.pick",
+        "body": "view.pick(x, y, viewer)",
+        "description": ""
+    },
+    "view.refreshViewer": {
+        "prefix": "view.refreshViewer",
+        "body": "view.refreshViewer(viewer, frameCount, forceUpdate)",
+        "description": "Refresh the viewer"
+    },
+    "view.removeRoot": {
+        "prefix": "view.removeRoot",
+        "body": "view.removeRoot(root, viewer)",
+        "description": "Remove a viewer root"
+    },
+    "view.resizeViewer": {
+        "prefix": "view.resizeViewer",
+        "body": "view.resizeViewer(width, height, viewer)",
+        "description": ""
+    },
+    "view.setCuttingPlaneProperty": {
+        "prefix": "view.setCuttingPlaneProperty",
+        "body": "view.setCuttingPlaneProperty(propertyName, propertyValue, viewer)",
+        "description": "Set a cutting plane property value"
+    },
+    "view.setExplodeViewProperty": {
+        "prefix": "view.setExplodeViewProperty",
+        "body": "view.setExplodeViewProperty(propertyName, propertyValue, viewer)",
+        "description": "Set an explode view property value"
+    },
+    "view.setViewerMatrices": {
+        "prefix": "view.setViewerMatrices",
+        "body": "view.setViewerMatrices(views, projs, clipping, viewer)",
+        "description": ""
+    },
+    "view.setViewerProperty": {
+        "prefix": "view.setViewerProperty",
+        "body": "view.setViewerProperty(propertyName, propertyValue, viewer)",
+        "description": "Set a viewer property value"
+    },
+    "view.takeScreenshot": {
+        "prefix": "view.takeScreenshot",
+        "body": "view.takeScreenshot(filename, viewer)",
+        "description": "Take a screenshot"
+    },
+    "view.visibilityShoot": {
+        "prefix": "view.visibilityShoot",
+        "body": "view.visibilityShoot(viewer, parts, patches, polygons, countOnce)",
+        "description": "Render one frame of the visibility session"
+    }
+}
