@@ -1,5 +1,6 @@
 # pixyz-api-search
 
+A simple python gui for browsing pixyz api offline
 ![image](Docs/pixyz-search.gif)
 
 # Installation
